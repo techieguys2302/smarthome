@@ -1,7 +1,7 @@
 /*-----Background-----*/
 
 body{
-	 background-image:url(../images/banner1.png);
+	 background-image:url(../images/homebackground.jpg);
 	 background-repeat:no-repeat;
 	 background-size:cover;
 	 width:100%;
@@ -13,18 +13,20 @@ body{
 /*-----for border----*/
 .container{
 	font-family:Roboto,sans-serif;
-	  background-image:url(../images/register-box.jpg) ;
+	 /* background-image:url(https://image.freepik.com/free-vector/dark-blue-blurred-background_1034-589.jpg) ; */
     
-     border-style: 1px solid grey;
+     border-style: 1px solid blue;--
      margin: 0 auto;
      text-align: center;
      opacity: 0.8;
      margin-top: 67px;
-     box-shadow: 2px 5px 5px 0px #eee;
+    /* box-shadow: 2px 5px 5px 0px #fff;*/
      max-width: 500px;
      padding-top: 10px;
      height: 380px;
      margin-top: 166px;
+	 position:relative;
+	 left:100px;
 }
 /*--- for label of first and last name---*/
 .lastname{
@@ -50,9 +52,11 @@ body{
 .heading{
 	 text-decoration:bold;
 	 text-align : center;
-	 font-size:30px;
-	 color:#F96;
-	 padding-top:10px;
+	 font-size:40px;
+	 color:white;
+	 padding-top:0px;
+	 padding-bottom:10px;
+	 font-style:bold;
 }
 /*-------for email----------*/
   /*------label----*/
@@ -118,7 +122,7 @@ body{
 	 color: white;
      font-size: 20px;
      border: 1px solid white;
-     background-color: #080808;
+    /* background-color: #080808;*/
 	 margin-top: 21px !important;
 	 margin-right: 37px !important;
      width: 32%;
@@ -129,16 +133,46 @@ body{
  .btn.btn-warning {
 	margin-right: 10px;
     margin-top: 41px;
+	background-color: Transparent
  }
  .btn.btn-warning.submit {
 	margin-right: 10px;
     margin-top: 41px;
- }
+	
+	
+ }/*
 .btn.btn-warning:hover {
     box-shadow: 2px 1px 2px 3px #99ccff;
 	background:#5900a6;
 	color:#fff;
 	transition: background-color 1.15s ease-in-out,border-color 1.15s ease-in-out,box-shadow 1.15s ease-in-out;
 	
-}	 
+}*/
+
+.space{
+	
+	 margin-top: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	  
