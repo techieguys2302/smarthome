@@ -5,9 +5,9 @@
 	$mysql_database = 'domisep';
 	$db = mysqli_connect($hostname, $user, $password,$mysql_database);
 	if(!$db){
-		echo "not";
+		die("System error occurred. Please try again later!!");
 	}else{
-		echo "con";
+		
 	}
 	#mysqli_select_db("domisep", $db);
 ?>

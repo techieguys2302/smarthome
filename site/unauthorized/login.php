@@ -1,9 +1,9 @@
-<script src="js/jquery/jquery.min.js"></script>
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="../../js/jquery/jquery.min.js"></script>
+<link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
 
 <!------ Include the above in your HEAD tag ---------->
-<link href="css/login.css" rel="stylesheet" id="bootstrap-css">
+<link href="../../css/login.css" rel="stylesheet" id="bootstrap-css"> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,10 +49,19 @@
  <!---heading---->
      <header class="heading"> Login </header><hr></hr>
 	<!---Form starting----> 
-	
+	<!--<br/>-->
 	<!-- <form method="post" name=""> -->
 	<div class="row ">
-	 <!--- For Name---->
+	
+	 <div class="col-sm-12">
+             <div class="row">
+			     <div class="col-xs-12">
+          	         <label class="error hidden" id="error"></label> </div>
+		      </div>
+		 </div>
+	<br/>
+	<br/>
+	 <!--- For Email---->
          <div class="col-sm-12">
              <div class="row">
 			     <div class="col-xs-4">
@@ -93,49 +102,23 @@
 			
 		  	 </div> -->
 		     <div class="col-sm-12">
-		         <div class="btn btn-warning submit"><button id="login" onclick="login()" class="login-btn">Login</button></div>
-				 <div class="btn btn-warning reset"><button id="reset" class="reset-btn">Reset</button></div>
+				<div class="row">
+					 <div class="button col-xs-8">
+						<div class="btn btn-warning submit" id="login" ><button class="login-btn">Login</button></div>
+						<div class="btn btn-warning reset"><button id="reset" class="reset-btn">Reset</button></div>
+					 </div>
+				 </div>
+				 
 		   </div>
 		 </div>
 	 </div>	 
 		 	<!-- </form> -->
 		 
 </div>
-<script type="text/javascript">
-$('#login').click(function() {
+<script src="../../js/profile/login.js">
 
- $.ajax({
-  type: "POST",
-  url: "",
-  data: { email: $('#email').val(), password: $('#password').val()  }
-}).done(function( msg ) {
-  alert( "Data Saved: " + msg );
-});    
-
-    });
 </script>
 	
-    <?php
-    //if (isset($_POST['submit']))
-		
-	function login()
-    {   
-		console.log("here");
-    include("config.php");
-    session_start();
-    $email=$_POST['email'];
-    $password=$_POST['password'];
-    $_SESSION['login_user']=$email; 
-    $query = mysqli_query($db,"SELECT email FROM users WHERE email='$email' and password='$password'");
-     if (mysqli_num_rows($query) != 0)
-    {
-     echo "<script language='javascript' type='text/javascript'> location.href='home.php' </script>";   
-      }
-      else
-      {
-    echo "<script type='text/javascript'>alert('User Name Or Password Invalid!')</script>";
-    }
-    }
-    ?>
+    
 </body>
 </html>

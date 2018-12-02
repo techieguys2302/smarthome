@@ -1,7 +1,7 @@
 /*-----Background-----*/
 
 body{
-	 background-image:url(../images/banner1.png);
+	 background-image:url(../images/homebackground.jpg);
 	 background-repeat:no-repeat;
 	 background-size:cover;
 	 width:100%;
@@ -13,18 +13,19 @@ body{
 /*-----for border----*/
 .container{
 	font-family:Roboto,sans-serif;
-	  background-image:url(../images/register-box.jpg) ;
+	  /*background-image:url(../images/register-box.jpg) ;
     
      border-style: 1px solid grey;
      margin: 0 auto;
      text-align: center;
      opacity: 0.8;
-     margin-top: 67px;
-     box-shadow: 2px 5px 5px 0px #eee;
+     margin-top: 67px;*/
+     /*box-shadow: 2px 5px 5px 0px #eee;*/
      max-width: 500px;
      padding-top: 10px;
      height: 380px;
-     margin-top: 166px;
+     margin-top: 106px;
+	 margin-right: 213px;
 }
 /*--- for label of first and last name---*/
 .lastname{
@@ -124,10 +125,18 @@ body{
      width: 32%;
 	 box-shadow: 0px 2px 2px 0px white;
   	   
-   }
-   
+ 
+  }
+ 
+ .button.col-xs-8{
+ float: right;
+ }
+ 
+ 
  .btn.btn-warning {
 	margin-right: 10px;
+	background-color: transparent !important;
+	color: white;
     margin-top: 41px;
  }
  .btn.btn-warning.submit {
@@ -137,17 +146,57 @@ body{
  
 .login-btn,.reset-btn{
 	color: #fff;
+    background-color: transparent !important;
+	color: white;
+    padding: 0;
+	border: none;
+	background: none;
+	
+}
+
+.error{
+	color: red;
+    padding: 0;
+	width: 100%
+	display: block !important;
+	border: none;
+	background: none;
+	text-align: center;
+}
+
+.hidden{
+
+	display: none !important;
+}
+
+.show{
+
+	display: block !important;
+}
+
+
+.login-btn,.reset-btn{
+	color: #fff;
     background-color: #f0ad4e !important;
     padding: 0;
 	border: none;
 	background: none;
 	
 }
+
+
 .btn.btn-warning:hover {
     box-shadow: 2px 1px 2px 3px #99ccff;
 	background:#5900a6;
 	color:#fff;
 	transition: background-color 1.15s ease-in-out,border-color 1.15s ease-in-out,box-shadow 1.15s ease-in-out;
 	
-}	 
+}
+
+/*.login-btn:hover{
+    box-shadow: 0px 0px 0px 0px #5900a6;
+	background:#5900a6;
+	color:#fff;
+	transition: background-color 1.15s ease-in-out,border-color 1.15s ease-in-out,box-shadow 1.15s ease-in-out; 
+}*/	 
 	  
