@@ -1,9 +1,9 @@
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="js/jquery/jquery.min.js"></script>
+<link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../js/jquery/jquery.min.js"></script>
 
 <!------ Include the above in your HEAD tag ---------->
-<link href="css/registration.css" rel="stylesheet" id="bootstrap-css">
+<link href="../../css/registration.css" rel="stylesheet" id="bootstrap-css">
 <script type="text/javascript">
 
 
@@ -32,8 +32,8 @@
           	         <label class="firstname">Apartment Name </label> </div>
 		         <div class="col-xs-8">
 		            <?php
-					include("config.php");
-					$sql="SELECT id,name FROM apartment order by name"; 
+					  include("../../config/config.php");
+						$sql="SELECT id,name FROM apartment order by name"; 
 
 
 
@@ -61,7 +61,7 @@
           	         <label class="firstname">Room Name </label> </div>
 		         <div class="col-xs-8">
 		            <?php
-					include("config.php");
+					include("../../config/config.php");
 					
 					session_start();
 					
@@ -95,7 +95,7 @@
           	         <label class="firstname">Sensor Type </label> </div>
 		         <div class="col-xs-8">
 		            <?php
-					include("config.php");
+					include("../../config/config.php");
 					//session_start();
 					$sql_1="SELECT id,name FROM sensor order by name"; 
 
@@ -196,7 +196,7 @@
 
 	
 </body>
-	<script src="js/profile/sensor.js"></script>
+	<script src="../../js/profile/sensor.js"></script>
 </html>
 
  

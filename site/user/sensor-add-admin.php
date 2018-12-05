@@ -1,9 +1,9 @@
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="js/jquery/jquery.min.js"></script>
+<link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../js/jquery/jquery.min.js"></script>
 
 <!------ Include the above in your HEAD tag ---------->
-<link href="css/registration.css" rel="stylesheet" id="bootstrap-css">
+<link href="../../css/registration.css" rel="stylesheet" id="bootstrap-css">
 <script type="text/javascript">
 
 
@@ -39,7 +39,7 @@
           	         <label class="firstname">Sensor Type </label> </div>
 		         <div class="col-xs-8">
 		            <?php
-					include("config.php");
+					include("../../config/config.php");
 					//session_start();
 					$sql_1="SELECT id,type FROM sensor_type order by type"; 
 
@@ -139,7 +139,7 @@
 
 	
 </body>
-	<script src="js/profile/sensor-add-admin.js"></script>
+	<script src="../../js/profile/sensor-add-admin.js"></script>
 </html>
 
  

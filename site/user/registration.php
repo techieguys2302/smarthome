@@ -1,9 +1,9 @@
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="js/jquery/jquery.min.js"></script>
-<script src="js/profile/registration.js"></script>
+<link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../js/jquery/jquery.min.js"></script>
+<script src="../../js/profile/registration.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-<link href="css/registration.css" rel="stylesheet" id="bootstrap-css">
+<link href="../../css/registration.css" rel="stylesheet" id="bootstrap-css">
 <!Doctype html>
 <html>
 <head>
@@ -97,7 +97,7 @@
 </div>
 
 	<?php
-	include("config.php");
+	include("../../config/config.php");
     session_start();
 	
 	 if (isset($_POST['submit'])) {
@@ -146,7 +146,7 @@ if (mysqli_query($db, $statement)) {
     ?>
 
 </body>
-	<script src="js/profile/registration.js"></script>
+	<script src="../../js/profile/registration.js"></script>
 </html>
 	 
 	

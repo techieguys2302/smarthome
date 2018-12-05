@@ -1,53 +1,31 @@
 
 	<?php
-	include("config.php");
+	include("../../config/config.php");
     session_start();
 	
 	 if (isset($_POST['apname'])) {
 $apname = $_POST['apname'];
-$hname = $_POST['hname'];
-$street = $_POST['street'];
-$city = $_POST['city'];
-$country = $_POST['country'];
-$zipcode = $_POST['zipcode'];
+$rname = $_POST['rname'];
+
 	header('http://localhost/smarthome/index.php');
 	$role = "user";
 	echo "statement is ";
-	$statement="INSERT INTO domisep.apartment
+	$statement="INSERT INTO `domisep`.`room`
 (
 `Name`,
-`House_Name`,
-`Street`,
-`City`,
-`Country`,
-`Zipcode`,
-`User_Id`,
-`Apartment_Role`,
-`Status`,
-`Number_Of_Rooms`,
-`Number_Of_People`,
+`Apartment_Id`,
 `Created_By`,
 `Created_On`,
 `Modified_By`,
 `Modified_On`)
 VALUES
 (
+'$rname',
 '$apname',
-'$hname',
-'$street',
-'$city',
-'$country',
-'$zipcode',
-1,
-'Primary user',
-1,
-4,
-3,
 'neethub',
 NOW(),
 'neethub',
-NOW()
-)";
+NOW());";
 echo $statement;
 
 

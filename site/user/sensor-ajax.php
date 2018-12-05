@@ -3,7 +3,7 @@
     if (isset($_POST['apid'])){
 		
 	
-    include("config.php");
+    include("../../config/config.php");
     session_start();
     $apId=$_POST['apid'];
   

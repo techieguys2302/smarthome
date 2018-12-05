@@ -1,37 +1,31 @@
 <?php
 
-	    if (isset($_POST['sname'])){
+	if (isset($_POST['sname'])){
 		
 	
-    include("config.php");
+    include("../../config/config.php");
     session_start();
     $sname=$_POST['sname'];
-	$rname=$_POST['rname'];
 	$stype=$_POST['sensortype'];
 	$max=$_POST['max'];
 	$min=$_POST['min'];
-	$statement= "INSERT INTO `domisep`.`room_sensor_association`
+	echo "values... ". $sname." ".$stype." ".$min;
+	$statement= "INSERT INTO `domisep`.`sensor`
 (
-`Sensor_Id`,
-`Room_Id`,
-`User_Assigned_Sensor_Minimum_Value`,
-`User_Assigned_Sensor_Maximum_Value`,
-`Reading`,
-`Energy_Consumed`,
-`Start_Date`,
+`Name`,
+`Sensor_Type_Id`,
+`Minimum_Value`,
+`Maximum_Value`,
 `Created_By`,
 `Created_On`,
 `Modified_By`,
 `Modified_On`)
 VALUES
 (
-$stype,
-$rname,
-$min,
-$max,
-'',
-'',
-NOW(),
+'$sname',
+'$stype',
+'$min',
+'$max',
 'neethub',
 NOW(),
 'neethub',

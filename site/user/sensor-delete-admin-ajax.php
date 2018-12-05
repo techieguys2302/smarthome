@@ -3,7 +3,7 @@
 	if (isset($_POST['sname'])){
 		
 	
-    include("config.php");
+    include("../../config/config.php");
     session_start();
     $sname=$_POST['sname'];
 	
