@@ -27,7 +27,7 @@ $('#add_sensor_submit').click(function() {
 			  url: "sensor-add-admin-ajax.php",
 			  data: { sname: $('#sname').val(),sensortype: $('#sensortype').val(),min: minval,max: maxval }
 			}).done( function( msg ) {
-				document.location.href="/smarthome/sensor-add-admin.php"
+				document.location.href="/smarthome/site/user/sensor-add-admin.php"
 			  console.log(msg);
 			}); 
  

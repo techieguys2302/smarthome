@@ -52,7 +52,7 @@ $('#add_sensor_submit').click(function() {
 			  url: "sensor-add-ajax.php",
 			  data: { rname: $('#rname').val(),sname: $('#sname').val(),sensortype: $('#sensortype').val(),min: minval,max: maxval }
 			}).done( function( msg ) {
-			document.location.href="/smarthome/sensor.php"
+			document.location.href="/smarthome/site/user/sensor.php"
 			  console.log(msg);
 			}); 
  
@@ -79,7 +79,7 @@ $('#finish_submit').click(function() {
 			  data: { rname: $('#rname').val(),sname: $('#sname').val(),sensortype: $('#sensortype').val(),min: minval,max: maxval }
 
 			}).done( function( msg ) {
-				document.location.href="/smarthome/registration.php"
+				document.location.href="/smarthome/site/user/registration.php"
 			  console.log(msg);
 			}); 
  

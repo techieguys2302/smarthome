@@ -25,7 +25,7 @@ $('#add_room_submit').click(function() {
 			  url: "room-ajax.php",
 			  data: { apname: $('#apname').val(), rname: $('#rname').val()}
 			}).done( function( msg ) {
-			document.location.href = 	"/smarthome/room.php";
+			document.location.href = 	"/smarthome/site/user/room.php";
 			  console.log(msg);
 			}); 
  
@@ -41,7 +41,7 @@ $('#add_sensor_submit').click(function() {
 			  url: "room-ajax.php",
 			  data: { apname: $('#apname').val(), rname: $('#rname').val()}
 			}).done( function( msg ) {
-			document.location.href = 	"/smarthome/sensor.php";
+			document.location.href = 	"/smarthome/site/user/sensor.php";
 			  console.log(msg);
 			}); 
  
