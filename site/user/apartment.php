@@ -120,16 +120,16 @@
 		 
 </div>
 
-
+</body>
 
 
 
 
 	<?php
 	include("../../config/config.php");
-    //session_start();
+    session_start();
 	
-	 if (isset($_POST['submit'])) {
+	 if (isset($_POST['apname'])) {
 $apname = $_POST['apname'];
 $hname = $_POST['hname'];
 $street = $_POST['street'];
@@ -188,7 +188,7 @@ if (mysqli_query($db, $statement)) {
 	
     ?>
 
-</body>
+
 	<script src="../../js/profile/apartment.js"></script>
 </html>
 	 

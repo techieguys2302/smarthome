@@ -17,7 +17,7 @@
      <header class="heading"> User Registration </header>
 	 <div class = "space"></div>
 	<!---Form starting----> 
-	<form method="post" name="" >
+	<form method="post" name="" action="/smarthome/site/user/apartment.php">
 	<div class="row ">
 	
 	 <!--- For Name---->
