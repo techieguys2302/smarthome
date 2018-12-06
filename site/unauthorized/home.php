@@ -151,7 +151,7 @@ function login(){
 }
 
 
-function registration(){
+function register(){
 	window.location.href= "/smarthome/site/unauthorized/registration.php";
 }
 </script>
