@@ -9,15 +9,16 @@
      $password=$_POST['password'];
     $_SESSION['login_user']=$email; 
     $query = mysqli_query($db,"SELECT * FROM users WHERE email='$email' and password='$password' and status=1 ");
+	
      if (mysqli_num_rows($query) != 0){
-
+		
 		$sth = mysqli_query($db,"SELECT * FROM users WHERE email='$email' and password='$password' and status=1");
 		$rows = array();
 		while($r = mysqli_fetch_assoc($sth)) {
 			$rows[] = $r;
 		}
 		
-		$_SESSION["user"] = json_encode($rows);
+		$_SESSION["user"] = ($rows);
 		
 		 $_SESSION['start'] = time(); // Taking now logged in time.
             // Ending a session in 30 minutes from the starting time.
@@ -36,6 +37,7 @@
       }
       else
       {
+		 
 		echo "error";
 	  }
     }

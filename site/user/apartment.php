@@ -1,3 +1,14 @@
+<?php
+//echo "here==>";
+	 session_start();
+	  $now = time(); // Checking the time now when home page starts.
+	   include("../core/header.php");
+	if( isset($_SESSION['user']) && ! ($now > $_SESSION['expire']))
+	{
+		 //session_start();
+
+ ?>
+
 <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="../../bootstrap/js/bootstrap.min.js"></script>
 <script src="../../js/jquery/jquery.min.js"></script>
@@ -5,6 +16,7 @@
 <!------ Include the above in your HEAD tag ---------->
 <link href="../../css/registration.css" rel="stylesheet" id="bootstrap-css">
 <!Doctype html>
+
 <html>
 <head>
      <meta charset="UTF-8">
@@ -23,6 +35,13 @@
 	 <!--- For Name---->
          <div class="col-sm-12">
              <div class="row">
+			 <div class="col-sm-12">
+             <div class="row">
+			     <div class="col-xs-12">
+          	         <label class="error hidden" id="error" style="color:red;"></label> </div>
+		      </div>
+		 </div>
+			 
 			     <div class="col-xs-4">
           	         <label class="firstname">Apartment Name </label> </div>
 		         <div class="col-xs-8">
@@ -98,7 +117,7 @@
 		  
 		  
 		  <br/>
-		  <br/>
+		  <br/
      <!-----------For Phone number-------->
 	 
          <div class="col-sm-12" style="padding-top:20px;">
@@ -106,7 +125,7 @@
 		     <div class="col-sm-12">
 		         <div  >
 				 <input class="btnsubmit btn-warning submit" id="apartment_submit" name="apartment_submit" type="submit" value=
-                            "Next" onclick=validateApartmentFields()>
+                            "Next" >
 							
 							
 							
@@ -122,74 +141,16 @@
 
 </body>
 
-
-
-
-	<?php
-	include("../../config/config.php");
-    session_start();
-	
-	 if (isset($_POST['apname'])) {
-$apname = $_POST['apname'];
-$hname = $_POST['hname'];
-$street = $_POST['street'];
-$city = $_POST['city'];
-$country = $_POST['country'];
-$zipcode = $_POST['zipcode'];
-	header('http://localhost/smarthome/index.php');
-	$role = "user";
-	echo "statement is ";
-	$statement="INSERT INTO domisep.apartment
-(
-`Name`,
-`House_Name`,
-`Street`,
-`City`,
-`Country`,
-`Zipcode`,
-`User_Id`,
-`Apartment_Role`,
-`Status`,
-`Number_Of_Rooms`,
-`Number_Of_People`,
-`Created_By`,
-`Created_On`,
-`Modified_By`,
-`Modified_On`)
-VALUES
-(
-'$apname',
-'$hname',
-'$street',
-'$city',
-'$country',
-'$zipcode',
-`neethub`,
-`Primary user`,
-1,
-`4`,
-`3`,
-`neethub`,
-date(),
-`neethub`,
-date()
-)";
-echo $statement;
-
-
-
-if (mysqli_query($db, $statement)) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $statement . "<br>" . mysqli_error($db);
-}
-	 }
-	 
-	
-    ?>
-
-
 	<script src="../../js/profile/apartment.js"></script>
 </html>
-	 
+<?php
+	}else{
+		session_destroy();
+		//die();
+		//echo "<script language='javascript' type='text/javascript'> location.href='/smarthome/site/unauthorized/login.php' </script>";   
+		 header("Location: http://localhost/smarthome/site/unauthorized/login.php");
+		 exit();
+	}
+
+?>	 
 	

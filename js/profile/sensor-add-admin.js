@@ -1,12 +1,4 @@
 
-
-
-
-
-
-
-
-
 $('#add_sensor_submit').click(function() {
 	var minval = document.getElementById("min").value;
 	var maxval = document.getElementById("max").value;

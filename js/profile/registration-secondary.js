@@ -2,6 +2,25 @@
 
 $('#submit').click(function(){
     var flag = validateFields();
+	if(flag) {
+    $apid = $('#apname').val();
+	$lname=$('#lname').val();
+	$fname=$('#fname').val();
+	$email=$('#email').val();
+	$password=$('#password').val();
+	$cpassword=$('#cpassword').val();
+	
+	
+	 $.ajax({
+			  type: "POST",
+			  url: "registration-secondary-ajax.php",
+			  data: { apid: $apid,lname:$lname,fname:$fname,email:$email,cpassword:$cpassword  },
+			success:  function( msg ) {
+				 
+			document.location.href="/smarthome/site/user/dashboard-user.php"
+			  console.log(msg);
+		}	}); 
+	}
 	return flag;	
 	
 });
@@ -63,3 +82,4 @@ function setErrorMessage(msg){
 	
 	
 }
+

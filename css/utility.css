@@ -1,59 +1,40 @@
 /*-----Background-----*/
 
-body{
-	 background-image:url(../images/c4.jpg);
-	 background-repeat:no-repeat;
-	 background-size:cover;
-	 width:100%;
-	 height:100vh;
-	 overflow:auto;
-	 
-}
 
 /*-----for border----*/
 .container{
 	font-family:Roboto,sans-serif;
-	 /* background-image:url(https://image.freepik.com/free-vector/dark-blue-blurred-background_1034-589.jpg) ; */
+	  /*background-image:url(../images/register-box.jpg) ;
     
-     border-style: 1px solid blue;--
+     border-style: 1px solid grey;
      margin: 0 auto;
      text-align: center;
      opacity: 0.8;
-     margin-top: 67px;
-    /* box-shadow: 2px 5px 5px 0px #fff;*/
+     margin-top: 67px;*/
+     /*box-shadow: 2px 5px 5px 0px #eee;*/
      max-width: 500px;
      padding-top: 10px;
-     height: 410px;
-     margin-top: 166px;
-	 position:relative;
-	 left:100px;
+     height: 380px;
+     margin-top: 106px;
+	 margin-right: 213px;
 }
 /*--- for label of first and last name---*/
 .lastname{
 	 margin-left: 1px;
      font-family: sans-serif;
      font-size: 14px;
-     color: #4D5656;
+     color: white;
      margin-top: 10px;
 }
-.firstname{
+.email,.password{
 	 margin-left: 1px;
      font-family: sans-serif;
      font-size: 14px;
-     color: #4D5656;
+     color: white;
      margin-top: 5px;
 }
 #lname{
 	 margin-top:5px;
-}
-	  
-	  
-	  
-.custom-select {
-  position: relative;
-  font-family: sans-serif;
-  font-size: 14px;
-  margin-top: 5px;
 }
 	  
 
@@ -61,11 +42,9 @@ body{
 .heading{
 	 text-decoration:bold;
 	 text-align : center;
-	 font-size:40px;
-	 color:#4D5656;
-	 padding-top:-10px;
-	 padding-bottom:10px;
-	 font-style:bold;
+	 font-size:30px;
+	 color:white;
+	 padding-top:10px;
 }
 /*-------for email----------*/
   /*------label----*/
@@ -77,12 +56,12 @@ body{
 .mail{
 	 margin-left: 44px;
      font-family: sans-serif;
-     color: #4D5656;
+     color: white;
      font-size: 14px;
      margin-top: 13px;
 }
 .pass{
-	 color: #4D5656;
+	 color: white;
      margin-top: 9px;
      font-size: 14px;
      font-family: sans-serif;
@@ -105,7 +84,7 @@ body{
 /*--------------for Gender---------------*/
      /*--------------label---------*/
 .gender {
-	 color: #4D5656;
+	 color: white;
      font-family: sans-serif;
      font-size: 14px;
      margin-left: 28px;
@@ -114,13 +93,13 @@ body{
 
      /*---------- for Input type--------*/
 .col-xs-4.male{
-	 color: #4D5656;
+	 color: white;
      font-size: 13px;
      margin-top: 9px;
      padding-bottom: 16px;
 }
 .col-xs-4.female {
-     color: #4D5656;
+     color: white;
      font-size: 13px;
      margin-top: 9px;
      padding-bottom: 16px;
@@ -128,65 +107,90 @@ body{
 }	
 /*------------For submit button---------*/
 .sbutton{
-	 color: #4D5656;
+	 color: white;
      font-size: 20px;
-     border: 1px solid #4D5656;
-    /* background-color: #080808;*/
+     border: 1px solid white;
+     background-color: #080808;
 	 margin-top: 21px !important;
 	 margin-right: 37px !important;
      width: 32%;
-	 box-shadow: 0px 2px 2px 0px #4D5656;
+	 box-shadow: 0px 2px 2px 0px white;
   	   
-   }
-   
+ 
+  }
+ 
+ .button.col-xs-8{
+ float: right;
+ }
+ 
+ 
  .btn.btn-warning {
 	margin-right: 10px;
+	background-color: transparent !important;
+	color: white;
     margin-top: 41px;
-	background-color: Transparent;
  }
  .btn.btn-warning.submit {
 	margin-right: 10px;
     margin-top: 41px;
+ }
+ 
+.login-btn,.reset-btn{
+	color: #fff;
+    background-color: transparent !important;
+	color: white;
+    padding: 0;
+	border: none;
+	background: none;
 	
+}
+
+
+.hidden{
+
+	display: none !important;
+}
+
+.show{
+
+	display: block !important;
+}
+
+
+.login-btn,.reset-btn{
+	color: #fff;
+    background-color: transparent !important;
+    padding: 0;
+	border: none;
+	background: none;
 	
- }/*
+}
+
+
 .btn.btn-warning:hover {
     box-shadow: 2px 1px 2px 3px #99ccff;
 	background:#5900a6;
 	color:#fff;
 	transition: background-color 1.15s ease-in-out,border-color 1.15s ease-in-out,box-shadow 1.15s ease-in-out;
 	
-}*/
-
-.col-sm-exr{
-	padding-top:6px;
-	
-}
-
-.space{
-	
-	 margin-top: 70px;
 }
 
 
 
+.error{
+	color: red !important;
+    padding: 0;
+	width: 100%;
+	display: block !important;
+	border: none;
+	background: none;
+	text-align: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*.login-btn:hover{
+    box-shadow: 0px 0px 0px 0px #5900a6;
+	background:#5900a6;
+	color:#fff;
+	transition: background-color 1.15s ease-in-out,border-color 1.15s ease-in-out,box-shadow 1.15s ease-in-out; 
+}*/	 
 	  

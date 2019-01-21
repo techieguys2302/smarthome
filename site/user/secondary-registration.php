@@ -17,7 +17,7 @@
 <body>
  <div class="container" >
  <!---heading---->
-     <header class="heading"> User Registration </header>
+     <header class="heading"> Add Secondary User </header>
 	 <div class = "space"></div>
 	<!---Form starting----> 
 	<form method="post" name="" action="/smarthome/site/user/apartment.php">
@@ -31,6 +31,36 @@
 	
 	
 	 <!--- For Name---->
+	 
+	    <div class="col-sm-12" style = "padding-bottom:5px;">
+             <div class="row">
+			     <div class="col-xs-4">
+          	         <label class="firstname">Apartment Name </label> </div>
+		         <div class="col-xs-8">
+		            <?php
+					  include("../../config/config.php");
+						$sql="SELECT id,name FROM apartment order by name"; 
+
+
+
+					echo "<select name= 'apname' id='apname' style= 'width:300px;height:35px;'>"; // list box select command
+					echo "<option selected=selected' value='select apartment name'>select apartment name</option>";
+						foreach ($db->query($sql) as $row){//Array or records stored in $row
+							//echo 'value is : '.$row['name'];
+							echo "<option value='$row[id]'>".$row['name']."</option>"; 
+							
+
+							/* Option values are added by looping through the array */ 
+
+}
+
+					echo "</select>";// Closing of list box
+					
+					?>
+					</div>
+				 </div>
+		     </div>
+	 
          <div class="col-sm-12">
              <div class="row">
 			     <div class="col-xs-4">
@@ -95,8 +125,7 @@
 		         <div  >
 				 <input class="btnsubmit btn-warning submit"  id ="submit" name="submit" type="submit" value=
                             "Submit" >
-							<input class="btnsubmit btn-warning submit"  name="cancel" type="button" value=
-                            "Cancel"></div>
+							
 				 
 		   </div>
 		 </div>
@@ -106,56 +135,10 @@
 		 
 </div>
 
-	<?php
-	include("../../config/config.php");
-    session_start();
 	
-	 if (isset($_POST['submit'])) {
-	$fname=$_POST['fname'];
-	
-	
-	$lname=$_POST['lname'];
-	$fname=$_POST['fname'];
-	$email=$_POST['email'];
-	$password=$_POST['password'];
-	$cpassword=$_POST['cpassword'];
-	
-	$role = "Customer";
-	echo "statement is ";
-	$statement="INSERT INTO domisep.users
-(
-Last_Name,
-First_Name,
-Email,
-Password,
-Status,
-User_Role
-)
-VALUES
-(
-'$lname',
-'$fname',
-'$email',
-'$password',
- 1,
-'$role'
-)";
-echo $statement;
-
-
-
-if (mysqli_query($db, $statement)) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $statement . "<br>" . mysqli_error($db);
-}
-	 }
-	 
-	
-    ?>
 
 </body>
-	<script src="../../js/profile/registration.js"></script>
+	<script src="../../js/profile/registration-secondary.js"></script>
 </html>
 	 
 	
