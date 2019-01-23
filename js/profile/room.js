@@ -6,10 +6,17 @@ $(document).ready(function(){
 
 function validateRoomFields(){
 	if(!$('#apname').val()){
-		alert("Please enter the apartment name");
+		
+		setErrorMessage("Please select the apartment name");
+		return false;
+		
 	}
-	if($('#rname').val()&& !$('#rname').val()){
-		alert("Please enter the room name");
+	if($('#apname').val()&& !$('#rname').val()){
+		setErrorMessage("Please enter the room name");
+		return false;
+	} else {
+		
+		return true;
 	}
 
 	
@@ -18,33 +25,33 @@ function validateRoomFields(){
 
 $('#add_room_submit').click(function() {
    
-  
+  var flag = validateRoomFields();
+  if(flag){
 	
 	 $.ajax({
 			  type: "POST",
 			  url: "room-ajax.php",
 			  data: { apname: $('#apname').val(), rname: $('#rname').val()}
 			}).done( function( msg ) {
-			document.location.href = 	"/smarthome/site/user/room.php";
+			 document.location.href = 	"/smarthome/site/user/sensor.php";
 			  console.log(msg);
 			}); 
+  } else {
+	  return false;
+  }
  
 });
 
 
-$('#add_sensor_submit').click(function() {
-   
-  
+
+
+
+function setErrorMessage(msg){
 	
-	 $.ajax({
-			  type: "POST",
-			  url: "room-ajax.php",
-			  data: { apname: $('#apname').val(), rname: $('#rname').val()}
-			}).done( function( msg ) {
-			document.location.href = 	"/smarthome/site/user/sensor.php";
-			  console.log(msg);
-			}); 
- 
-});
-
-
+		$("#error").text(msg);
+		$("#error").removeClass('hidden');
+		$("#error").addClass('show');
+	
+	
+	
+}

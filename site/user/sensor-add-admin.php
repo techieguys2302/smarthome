@@ -1,3 +1,14 @@
+<?php
+//echo "here==>";
+	 session_start();
+	  $now = time(); // Checking the time now when home page starts.
+	   include("../core/header.php");
+	if( isset($_SESSION['user']) && ! ($now > $_SESSION['expire']))
+	{
+		 //session_start();
+
+ ?>
+
 <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="../../bootstrap/js/bootstrap.min.js"></script>
 <script src="../../js/jquery/jquery.min.js"></script>
@@ -147,6 +158,16 @@
 </body>
 	<script src="../../js/profile/sensor-add-admin.js"></script>
 </html>
+<?php
+	}else{
+		session_destroy();
+		//die();
+		//echo "<script language='javascript' type='text/javascript'> location.href='/smarthome/site/unauthorized/login.php' </script>";   
+		 header("Location: http://localhost/smarthome/site/unauthorized/login.php");
+		 exit();
+	}
 
+?>	 
+ 
  
 	

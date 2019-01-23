@@ -8,14 +8,12 @@
 		 //session_start();
 
  ?>
-
 <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="../../bootstrap/js/bootstrap.min.js"></script>
 <script src="../../js/jquery/jquery.min.js"></script>
 
 <!------ Include the above in your HEAD tag ---------->
 <link href="../../css/registration.css" rel="stylesheet" id="bootstrap-css">
-<link href="../../css/menu.css" rel="stylesheet" id="bootstrap-css">
 <script type="text/javascript">
 
 
@@ -25,45 +23,33 @@
 <html>
 <head>
      <meta charset="UTF-8">
-     <title>Add Sensor</title>
+     <title>Delete Room</title>
      	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
-<?php
-   include("../core/menu.php");
-?>
  <div class="container" >
  <!---heading---->
-     <header class="heading"> Admin - Add Sensor </header>
+     <header class="heading"> Delete Room </header>
 	 <div class = "space"></div>
 	<!---Form starting----> 
-	<form method="post" name=""  >
+	<form method="post" name="">
 	<div class="row ">
 	
 	 <!--- For Name---->
-        
-			 <!--- Room name---->
-			
-		 
-		 
-		 
-     
-		 <div class="col-sm-12" style="padding-top:10px;">
-		     <div class="row">
+         <div class="col-sm-12">
+             <div class="row">
 			     <div class="col-xs-4">
-          	         <label class="firstname">Sensor Name </label> </div>
+          	         <label class="firstname">Apartment Name </label> </div>
 		         <div class="col-xs-8">
 		            <?php
-					include("../../config/config.php");
-					//session_start();
-					$sql_1="SELECT id,name FROM sensor order by name"; 
+					  include("../../config/config.php");
+						$sql="SELECT id,name FROM apartment order by name"; 
 
 
 
-					echo "<select name= 'sname' id='sname' style= 'width:300px;height:35px;'>"; // list box select command
-					echo "<option selected=selected' value=''>select sensor </option>";
-						foreach ($db->query($sql_1) as $row){//Array or records stored in $row
+					echo "<select name= 'apname' id='apname' style= 'width:300px;height:35px;'>"; // list box select command
+					echo "<option selected=selected' value='select apartment name'>select apartment name</option>";
+						foreach ($db->query($sql) as $row){//Array or records stored in $row
 							//echo 'value is : '.$row['name'];
 							echo "<option value='$row[id]'>".$row['name']."</option>"; 
 							
@@ -75,26 +61,33 @@
 					echo "</select>";// Closing of list box
 					
 					?>
+					</div>
 				 </div>
 		     </div>
-  </div>
-  
-		 
-	
-			 
-			 
-		 </div>
-		 
-	
-	 
-		  <br/>
-		  <br/>
-		  
-		
-		  
-	
-		  
-		  
+			 <!--- Room name---->
+			 <div class="col-sm-12" style="padding-top:10px;">
+			   <div class="row" >
+			     <div class="col-xs-4">
+          	         <label class="firstname">Room Name </label> </div>
+		         <div class="col-xs-8">
+		            <?php
+					include("../../config/config.php");
+					
+					session_start();
+					
+
+
+
+					echo "<select name= 'rname' id='rname' style= 'width:300px;height:35px;'>"; // list box select command
+                    echo "<option selected=selected' value='select room name' id='room_option'>select room name</option>";
+					echo "<input type='hidden' id='rooms' />";
+					echo "</select>";// Closing of list box
+					
+					?>
+				 </div>
+		     </div>
+			 </div>
+
 		  <br/>
 		  <br/>
      <!-----------For Phone number-------->
@@ -103,11 +96,10 @@
 		
 		     <div class="col-sm-12">
 		         <div  >
-				 <input class="btnsubmit btn-warning submit"  name="delete_sensor_submit" id="delete_sensor_submit" type="submit" value=
-                            "Delete Sensor" >
+				 		
 							
-							
-							
+							<input class="btnsubmit btn-warning submit"  name="finish_submit" id="finish_submit" type="submit" value=
+                            "Submit" >
 							
 							
 				 
@@ -119,11 +111,11 @@
 		 
 </div>
 
-	</body>
-	<script src="../../js/profile/sensor-delete-admin.js"></script>
-	</html>
 	
-	<?php
+</body>
+	<script src="../../js/profile/delete-room.js"></script>
+</html>
+<?php
 	}else{
 		session_destroy();
 		//die();
@@ -134,3 +126,4 @@
 
 ?>	 
  
+	

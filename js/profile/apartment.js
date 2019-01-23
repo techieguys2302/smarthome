@@ -4,37 +4,63 @@ $(document).ready(function(){
 	
 });
 
+$('#apartment_submit').click(function(){
+    var flag = validateApartmentFields();
+	if(flag){
+		$.ajax({
+			  type: "POST",
+			  url: "apartment-ajax.php",
+			  data: { apname: $('#apname').val(), hname: $('#hname').val(),
+			  street: $('#street').val(),city: $('#city').val(),
+			  country: $('#country').val(),zipcode: $('#zipcode').val()}
+			}).done( function( msg ) {
+			document.location.href = 	"/smarthome/site/user/room.php";
+			  console.log(msg);
+			});
+	} else {
+		return flag;
+		
+	}
+		
+	
+});
+
+
+
 function validateApartmentFields(){
 	if(!$('#apname').val()){
-		alert("Please enter the apartment name");
+		setErrorMessage("Please enter the apartment name");
+		return false;
 	}
 	if($('#apname').val()&& !$('#hname').val()){
-		alert("Please enter the house number/name");
+		setErrorMessage("Please enter the house number/name");
+		return false;
 	}
 	if($('#apname').val() && $('#hname').val() && !$('#street').val()){
-		alert("Please enter the street name");
+		setErrorMessage("Please enter the street name");
+		return false;
 	}
 	
 	if($('#apname').val() && $('#hname').val() && $('#street').val() && !$('#city').val()){
-		alert("Please enter the city name");
+		setErrorMessage("Please enter the city name");
+		return false;
 	}
 		if($('#apname').val() && $('#hname').val() && $('#street').val() && $('#city').val() &&  !$('#country').val()){
-		alert("Please enter the country name");
+		setErrorMessage("Please enter the country name");
+		return false;
 	}
 	
 	if($('#apname').val() && $('#hname').val() && $('#street').val() && $('#city').val() && $('#country').val() &&  !$('#zipcode').val()){
-		alert("Please enter the zip code");
+		setErrorMessage("Please enter the zip code");
+		return false;
+	} else {
+		
+		return true;
 	}
 	
 	
 	
-	
 }
-function setFormName(name){
-	 document.getElementById("fname").value = name;
-	
-}
-
 
 $('#apartment_submit').click(function() {
    
@@ -55,8 +81,16 @@ $('#apartment_submit').click(function() {
  
 });
 
-function reset(){
-	$('#fname').val()='';
+function setErrorMessage(msg){
+	
+		$("#error").text(msg);
+		$("#error").removeClass('hidden');
+		$("#error").addClass('show');
+	
 	
 	
 }
+
+
+
+
