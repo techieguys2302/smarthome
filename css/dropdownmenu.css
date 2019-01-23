@@ -1,0 +1,52 @@
+body{
+background: url("smrts.jpg") no-repeat;
+background-size:cover;
+font-family:Arial;
+color:white;
+}
+
+.drop-menu{
+background-color : grey;
+}
+
+.center{
+	margin: auto;
+	
+}
+
+ul.drop-menus{
+margin:0px;
+padding:0px;
+list-style:none;
+z-index: 500;
+position: relative;
+}
+
+ul li.drop-menus{
+	float:left;
+	width: 190px;
+	height:40px;
+	background-color:grey;
+	line-height:40px;
+	text-align: center;
+	font-size:20px;
+	margin-right:2px;
+	
+}
+
+ul li a.drop-menus{
+	text-decoration:none;
+	color: white;
+	display: block;
+}
+
+
+ul li ul li.drop-menus{
+	display:none;
+	
+}
+
+ul li:hover ul li.drop-menus{
+	display:block;
+	
+}

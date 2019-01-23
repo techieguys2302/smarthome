@@ -50,7 +50,7 @@ $('#apartment_submit').click(function() {
 			  country: $('#country').val(),zipcode: $('#zipcode').val()}
 			}).done( function( msg ) {
 			document.location.href = 	"/smarthome/site/user/room.php";
-			  console.log(msg);
+			  
 			}); 
  
 });

@@ -18,7 +18,7 @@ $('#apname').change(function() {
 
 $('#sensortype').change(function() {
     var sensorType = this.value;
-	alert("sensor type  "+sensorType);
+
 	if(sensorType == 1){
 		document.getElementById("mindiv").style.display="block";
 		document.getElementById("maxdiv").style.display="block";

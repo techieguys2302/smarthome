@@ -105,6 +105,7 @@ height: 100px;
  .slideshow-container{
 	 width:100% !important;
 	 position:absolute;
+	     margin-top: 40px;
  }
  
  .sensors{
@@ -117,7 +118,7 @@ height: 100px;
  .discription{
 	height: auto;
 	width:100%;
-	padding-top: 355px;
+	padding-top: 395px;
  }
  
 .sensor.description,.img2,.img4{

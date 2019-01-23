@@ -10,9 +10,8 @@ $street = $_POST['street'];
 $city = $_POST['city'];
 $country = $_POST['country'];
 $zipcode = $_POST['zipcode'];
-	header('http://localhost/smarthome/index.php');
-	$role = "user";
-	echo "statement is ";
+	$role = "Customer";
+	
 	$statement="INSERT INTO domisep.apartment
 (
 `Name`,
@@ -48,12 +47,12 @@ NOW(),
 'neethub',
 NOW()
 )";
-echo $statement;
+
 
 
 
 if (mysqli_query($db, $statement)) {
-   echo ("/smarthome/site/user/sensor.php");
+   echo "";
 } else {
     echo "Error: " . $statement . "<br>" . mysqli_error($db);
 }

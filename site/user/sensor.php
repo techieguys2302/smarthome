@@ -4,6 +4,7 @@
 
 <!------ Include the above in your HEAD tag ---------->
 <link href="../../css/registration.css" rel="stylesheet" id="bootstrap-css">
+<link href="../../css/menu.css" rel="stylesheet" id="bootstrap-css">
 <script type="text/javascript">
 
 
@@ -17,6 +18,11 @@
      	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
+<?php
+   include("../core/menu.php");
+?>
+
  <div class="container" >
  <!---heading---->
      <header class="heading"> Add Sensor </header>
@@ -97,7 +103,7 @@
 		            <?php
 					include("../../config/config.php");
 					//session_start();
-					$sql_1="SELECT id,name FROM sensor order by name"; 
+					$sql_1="SELECT id,type FROM sensor_type order by type"; 
 
 
 
@@ -105,7 +111,7 @@
 					echo "<option selected=selected' value='select sensor type'>select sensor type</option>";
 						foreach ($db->query($sql_1) as $row){//Array or records stored in $row
 							//echo 'value is : '.$row['name'];
-							echo "<option value='$row[id]'>".$row['name']."</option>"; 
+							echo "<option value='$row[id]'>".$row['type']."</option>"; 
 							
 
 							/* Option values are added by looping through the array */ 

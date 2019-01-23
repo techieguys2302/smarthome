@@ -4,6 +4,7 @@
 
 <!------ Include the above in your HEAD tag ---------->
 <link href="../../css/registration.css" rel="stylesheet" id="bootstrap-css">
+<link href="../../css/menu.css" rel="stylesheet" id="bootstrap-css">
 <script type="text/javascript">
 
 
@@ -17,12 +18,16 @@
      	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<?php
+   include("../core/menu.php");
+?>	
+
  <div class="container" >
  <!---heading---->
      <header class="heading"> Add Room </header>
 	 <div class = "space"></div>
 	<!---Form starting----> 
-	<form method="post" name="" >
+	<!--<form method="post" name="" >-->
 	<div class="row ">
 	
 	 <!--- For Name---->
@@ -85,11 +90,15 @@
 		
 		     <div class="col-sm-12">
 		         <div  >
-				 <input class="btnsubmit btn-warning submit"  name="add_room_submit" id="add_room_submit" type="submit" value=
-                            "Add Another Room" onclick=validateRoomFields()>
+				<!-- <input class="btnsubmit btn-warning submit"  name="add_room_submit" id="add_room_submit" type="submit" value=
+                            "Add Another Room" onclick=validateRoomFields()>-->
 							
 							<input class="btnsubmit btn-warning submit"  name="add_sensor_submit" id="add_sensor_submit" type="submit" value="Next" onclick=NextvalidateRoomFields()
-                             ></div>
+                             />
+							 
+							 <input class="btnsubmit btn-warning submit"  name="add_sensor_submit" id="add_sensor_submit" type="button" value="Cancel" onclick=NextvalidateRoomFields()
+                             />
+							 </div>
 							
 							
 				 
@@ -97,7 +106,7 @@
 		 </div>
 		 
 	 </div>	 
-	</form>	 		 
+	<!--</form>	--> 		 
 		 
 </div>
 

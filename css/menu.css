@@ -1,0 +1,57 @@
+
+.domisep{
+color: #87cefa;
+font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+.smart{
+font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+color: #8C8C8C;
+}
+
+.menu{
+color: #fff;
+height: 100px;
+background-color: white;
+padding-top: 20px;
+}
+
+/*menu*/
+.leftmenu{
+	width: 50%;
+	float: left;
+	margin:0;
+	padding-top: 5px;
+	
+}
+.leftmenu h4{
+	padding-left:70px;
+	font-weight: bold;
+	color: black;
+	font-size: 22px;
+}
+a:hover{
+text-decoration: red !important;
+}
+
+
+#firstlist{
+	colour: orange;
+}
+ 
+ .rightmenu{
+	 display:none !important;
+ }
+ 
+ 
+ .homeicon{
+color: black !important;
+}
+
+.icon{
+
+width: 30px;
+height: 30px;
+
+
+}

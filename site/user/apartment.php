@@ -4,6 +4,7 @@
 
 <!------ Include the above in your HEAD tag ---------->
 <link href="../../css/registration.css" rel="stylesheet" id="bootstrap-css">
+<link href="../../css/menu.css" rel="stylesheet" id="bootstrap-css">
 <!Doctype html>
 <html>
 <head>
@@ -12,12 +13,18 @@
      	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<?php
+   include("../core/menu.php");
+?>
+
  <div class="container" >
  <!---heading---->
+ 
+<br/><br/>
      <header class="heading"> Add Apartment </header>
 	 <div class = "space"></div>
 	<!---Form starting----> 
-	<form method="post" name="" >
+	<!--<form method="post" name="" >-->
 	<div class="row ">
 	
 	 <!--- For Name---->
@@ -106,7 +113,10 @@
 		     <div class="col-sm-12">
 		         <div  >
 				 <input class="btnsubmit btn-warning submit" id="apartment_submit" name="apartment_submit" type="submit" value=
-                            "Next" onclick=validateApartmentFields()>
+                            "Next" onclick=validateApartmentFields()/>
+							
+				<input class="btnsubmit btn-warning submit" id="apartment_submit" name="apartment_submit" type="button" value=
+                            "Cancel" onclick=validateApartmentFields()/>
 							
 							
 							
@@ -116,7 +126,7 @@
 		 </div>
 		 
 	 </div>	 
-	</form>	 		 
+	<!--</form>-->	 		 
 		 
 </div>
 
@@ -127,7 +137,7 @@
 
 	<?php
 	include("../../config/config.php");
-    session_start();
+   // session_start();
 	
 	 if (isset($_POST['apname'])) {
 $apname = $_POST['apname'];
@@ -136,9 +146,8 @@ $street = $_POST['street'];
 $city = $_POST['city'];
 $country = $_POST['country'];
 $zipcode = $_POST['zipcode'];
-	header('http://localhost/smarthome/index.php');
-	$role = "user";
-	echo "statement is ";
+	$role = "Customer";
+	
 	$statement="INSERT INTO domisep.apartment
 (
 `Name`,
@@ -174,14 +183,14 @@ date(),
 `neethub`,
 date()
 )";
-echo $statement;
+//echo $statement;
 
 
 
 if (mysqli_query($db, $statement)) {
-    echo "New record created successfully";
+    //echo "New record created successfully";
 } else {
-    echo "Error: " . $statement . "<br>" . mysqli_error($db);
+    //echo "Error: " . $statement . "<br>" . mysqli_error($db);
 }
 	 }
 	 

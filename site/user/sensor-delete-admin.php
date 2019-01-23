@@ -4,6 +4,7 @@
 
 <!------ Include the above in your HEAD tag ---------->
 <link href="../../css/registration.css" rel="stylesheet" id="bootstrap-css">
+<link href="../../css/menu.css" rel="stylesheet" id="bootstrap-css">
 <script type="text/javascript">
 
 
@@ -17,6 +18,10 @@
      	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
+<?php
+   include("../core/menu.php");
+?>
  <div class="container" >
  <!---heading---->
      <header class="heading"> Admin - Add Sensor </header>

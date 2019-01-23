@@ -6,10 +6,15 @@
 <head>
     <title></title>
 	<!------ Include the above in your HEAD tag ---------->
-<link href="../../css/login.css" rel="stylesheet" id="bootstrap-css"> 
+<link href="../../css/login.css" rel="stylesheet" id="bootstrap-css">
+<link href="../../css/menu.css" rel="stylesheet" id="bootstrap-css"> 
 </head>
 <body>
-   
+
+<?php
+   include("../core/menu.php");
+?>
+   <br/>
 	<div class="container">
  <!---heading---->
      <header class="heading"> Login </header><hr></hr>
@@ -62,7 +67,10 @@
 	 </div>	 
 		 	<!-- </form> -->
 		 
-</div>
+
+<?php
+	include("../core/footer.php")
+?>
 <script src="../../js/profile/login.js">
 
 </script>

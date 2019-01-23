@@ -17,7 +17,7 @@
 			$rows[] = $r;
 		}
 		
-		$_SESSION["user"] = json_encode($rows);
+		$_SESSION["user"] = $rows;
 		
 		 $_SESSION['start'] = time(); // Taking now logged in time.
             // Ending a session in 30 minutes from the starting time.

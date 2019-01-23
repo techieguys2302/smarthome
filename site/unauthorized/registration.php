@@ -10,14 +10,21 @@
      <meta charset="UTF-8">
      <title>Registration Form</title>
      	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link href="../../css/menu.css" rel="stylesheet" id="bootstrap-css">
 </head>
 <body>
+
+<?php
+   include("../core/menu.php");
+?>
+<br/>
  <div class="container" >
  <!---heading---->
      <header class="heading"> User Registration </header>
 	 <div class = "space"></div>
 	<!---Form starting----> 
-	<form method="post" name="" action="/smarthome/site/user/apartment.php">
+	<form method="post" name="" action="/smarthome/site/unauthorized/registration-ajax.php">
 	<div class="row ">
 	
 	 <!--- For Name---->
@@ -95,55 +102,6 @@
 	</form>	 		 
 		 
 </div>
-
-	<?php
-	include("../../config/config.php");
-    session_start();
-	
-	 if (isset($_POST['submit'])) {
-	$fname=$_POST['fname'];
-	
-	
-	$lname=$_POST['lname'];
-	$fname=$_POST['fname'];
-	$email=$_POST['email'];
-	$password=$_POST['password'];
-	$cpassword=$_POST['cpassword'];
-	$password=$_POST['password'];
-	header('http://localhost/smarthome/index.php');
-	$role = "user";
-	echo "statement is ";
-	$statement="INSERT INTO domisep.users
-(
-Last_Name,
-First_Name,
-Email,
-Password,
-Status,
-User_Role
-)
-VALUES
-(
-'$lname',
-'$fname',
-'$email',
-'$password',
- 1,
-'$role'
-)";
-echo $statement;
-
-
-
-if (mysqli_query($db, $statement)) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $statement . "<br>" . mysqli_error($db);
-}
-	 }
-	 
-	
-    ?>
 
 </body>
 	<script src="../../js/profile/registration.js"></script>
