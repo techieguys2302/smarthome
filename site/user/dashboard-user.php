@@ -13,13 +13,12 @@
 <html>
 <head>
     <title>Smarthome Dashborad</title>
-	<link href="../../css/dashboard.css" rel="stylesheet" id="bootstrap-css"> 
-	<link href="../../css/menu.css" rel="stylesheet" id="bootstrap-css">	
+	<link href="../../css/dashboard.css" rel="stylesheet" id="bootstrap-css"> 	
 </head>
 <body>
 
 <?php
-   include("../core/menu.php");
+   include("../core/loginmenu.php");
 ?>
 <?php
   include("../core/dropdownmenu.php");
@@ -272,6 +271,9 @@
 <script src="../../js/profile/dashboard-user.js">
 
 </script>
+<?php
+	include("../core/footer.php")
+?>
 </body>
 </html>
 <?php

@@ -1,9 +1,20 @@
+<?php
+//echo "here==>";
+	 session_start();
+	  $now = time(); // Checking the time now when home page starts.
+	   include("../core/header.php");
+	if( isset($_SESSION['user']) && ! ($now > $_SESSION['expire']))
+	{
+		 //session_start();
+		 $_SESSION['expire'] = time() + (30 * 60);
+
+ ?>
 <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="../../bootstrap/js/bootstrap.min.js"></script>
 <script src="../../js/jquery/jquery.min.js"></script>
 
 <!------ Include the above in your HEAD tag ---------->
-<link href="../../css/registration.css" rel="stylesheet" id="bootstrap-css">
+<link href="../../css/apartment.css" rel="stylesheet" id="bootstrap-css">
 <link href="../../css/menu.css" rel="stylesheet" id="bootstrap-css">
 <!Doctype html>
 <html>
@@ -14,7 +25,11 @@
 </head>
 <body>
 <?php
-   include("../core/menu.php");
+   include("../core/loginmenu.php");
+?>
+<?php
+  include("../core/dropdownmenu.php");
+  
 ?>
 
  <div class="container" >
@@ -108,15 +123,15 @@
 		  <br/>
      <!-----------For Phone number-------->
 	 
-         <div class="col-sm-12" style="padding-top:20px;">
+         <div class="col-sm-12" style="padding-top:45px;">
 		
 		     <div class="col-sm-12">
 		         <div  >
 				 <input class="btnsubmit btn-warning submit" id="apartment_submit" name="apartment_submit" type="submit" value=
-                            "Next" onclick=validateApartmentFields()/>
+                            "Next" onclick="validateApartmentFields()"/>
 							
 				<input class="btnsubmit btn-warning submit" id="apartment_submit" name="apartment_submit" type="button" value=
-                            "Cancel" onclick=validateApartmentFields()/>
+                            "Cancel" onclick="cancel()"/>
 							
 							
 							
@@ -129,7 +144,11 @@
 	<!--</form>-->	 		 
 		 
 </div>
-
+</div>
+<br/><br/>
+<?php
+	include("../core/footer.php")
+?>
 </body>
 
 
@@ -200,5 +219,14 @@ if (mysqli_query($db, $statement)) {
 
 	<script src="../../js/profile/apartment.js"></script>
 </html>
-	 
+<?php
+	}else{
+		session_destroy();
+		//die();
+		//echo "<script language='javascript' type='text/javascript'> location.href='/smarthome/site/unauthorized/login.php' </script>";   
+		 header("Location: http://localhost/smarthome/site/unauthorized/login.php");
+		 exit();
+	}
+
+?> 
 	

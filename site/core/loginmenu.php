@@ -1,4 +1,3 @@
-
 <link href="../../css/menu.css" rel="stylesheet" id="bootstrap-css">
 <div class="menu" >
 <div class="leftmenu">
@@ -8,8 +7,9 @@
 
 
 <div class="rightmenu">
-<button id="buttonone" onclick="login()"> LOGIN </button>
-<button id="buttontwo" onclick="register()"> REGISTER </button>
+
+
+<button id="buttonone" onclick="logout()"> LOGOUT </button>
 
 </div>
 </div>

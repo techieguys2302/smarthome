@@ -22,7 +22,7 @@
 		mysqli_close($db);
 
 	}else{
-		echo "yygyggy";
+		
 		session_destroy();
 		echo "Login";
 	}

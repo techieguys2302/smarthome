@@ -27,6 +27,13 @@
      	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<?php
+   include("../core/loginmenu.php");
+?>
+<?php
+  include("../core/dropdownmenu.php");
+  
+?>
  <div class="container" >
  <!---heading---->
      <header class="heading"> Delete Apartment </header>
@@ -89,7 +96,9 @@
 		 
 </div>
 
-	
+<?php
+	include("../core/footer.php")
+?>
 </body>
 	<script src="../../js/profile/delete-apartment.js"></script>
 </html>

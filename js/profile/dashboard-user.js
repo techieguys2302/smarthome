@@ -28,14 +28,16 @@ $('.edi-btn,.edit-btns').click(function(){
 	
 	if(id.indexOf('editApart') > -1){
 		var aparId = id.slice((id.indexOf('editApart')+9),id.length);
-		console.log(aparId);
+		window.location.href="/smarthome/site/user/edit-apartment.php?id="+aparId;
 	}else if(id.indexOf('editRoom') > -1){
 		var roomId = id.slice((id.indexOf('editApart')+9),id.length);
 		console.log(roomId);
+		window.location.href="/smarthome/site/user/edit-room.php?id="+roomId;
 		
 	}else if(id.indexOf('editSensor') > -1){
 		var sensorId = id.slice((id.indexOf('editApart')+11),id.length);
 		console.log(sensorId);
+		window.location.href="/smarthome/site/user/edit-sensor.php?id="+sensorId;
 		
 	}
 	

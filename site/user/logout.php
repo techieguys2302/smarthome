@@ -9,7 +9,8 @@ Logged out!!
 session_start();
 if(session_destroy())
 {
-header("Location: login.php");
+header("Location: http://localhost/smarthome/site/unauthorized/login.php");
+exit();
 }
 ?>
 </body>

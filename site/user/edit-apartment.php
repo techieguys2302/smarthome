@@ -15,7 +15,7 @@
 <script src="../../js/profile/registration.js"></script>
 
 <!------ Include the above in your HEAD tag ---------->
-<link href="../../css/registration.css" rel="stylesheet" id="bootstrap-css">
+<link href="../../css/edit-apartment.css" rel="stylesheet" id="bootstrap-css">
 <script src="../../css/utility.css" rel="stylesheet" id="bootstrap-css"></script>
 <!Doctype html>
 <html>
@@ -25,6 +25,13 @@
      	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<?php
+   include("../core/loginmenu.php");
+?>
+<?php
+  include("../core/dropdownmenu.php");
+  
+?>
  <div class="container" >
  <!---heading---->
      <header class="heading"> Edit Apartment </header>
@@ -53,7 +60,7 @@
 		 </div>
      
 		 
-		   <div class="col-sm-12" style="margin-top:5px;">
+		  <!-- <div class="col-sm-12" style="margin-top:5px;">
              <div class="row">
 			     <div class="col-xs-4">
           	         <label class="firstname">Apartment Name </label> </div>
@@ -80,9 +87,9 @@
 					?>
 					</div>
 				 </div>
-		     </div>
+		     </div> -->
 		 
-		 <div id = "apartment"  style="display:none;">
+		 <div id = "apartment"  style="display:block;">
 		
 			 <div class="col-sm-12" style="margin-top: 5px;">
 		     <div class="row">
@@ -152,7 +159,7 @@
 		  <br/>
      <!-----------For Phone number-------->
 	 
-         <div class="col-sm-12" style="margin-top:10px;">
+         <div class="col-sm-12" style="margin-top:15px;">
 		
 		     <div class="col-sm-12" >
 		         <div id ="edit_btn_div" >
@@ -165,10 +172,15 @@
 		 
 	 </div>	 
 	</form>	 		 
-		 
+		
 </div>
 </div>
-	
+</div>
+<br/>
+<br/>
+	<?php
+	include("../core/footer.php")
+?>
 </body>
 	<script src="../../js/profile/edit-apartment.js"></script>
 </html>

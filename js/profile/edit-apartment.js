@@ -1,6 +1,21 @@
+
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
 $(document).ready(function(){
-	$("#edit_btn_div").prop('hidden', true);
+	//$("#edit_btn_div").prop('hidden', true);
   
+  aparDetails();
 			
 });
 
@@ -32,8 +47,9 @@ $('#edit_submit').click(function() {
 });
 
 
-$('#apname').change(function() {
-    var id = this.value;
+function aparDetails() {
+    var id = getUrlVars()["id"];
+	
 	if(id == 'select apartment name' || id == ''){
 		$('#apartment').hide();
 		
@@ -42,7 +58,7 @@ $('#apname').change(function() {
 		$.ajax({
 			  type: "POST",
 			  url: "edit-apartment-ajax.php",
-			  data: { apname:  $("#apname").val()},
+			  data: { apname:  id},
 			  success:  function( msg ) {
 				 $.each(msg,function(id,item){
 					 
@@ -58,7 +74,7 @@ $('#apname').change(function() {
 		}	}); 
 	}
 
-});
+}
 
 $('#edit').click(function(event) {
   enableFields(event);

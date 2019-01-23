@@ -9,7 +9,12 @@ $('#apname').change(function() {
 			  url: "sensor-ajax.php",
 			  data: { apid: id }
 			}).done( function( msg ) {
-			//document.location.href="/smarthome/sensor.php"
+				 $('#rname').empty();
+				 $('#rname').append( "<option selected=selected' value='select room name' id='room_option'>select room name</option>");
+			$.each(msg,function(id,item){
+				     
+					 $('#rname').append("<option value="+ msg[id].id + ">" + msg[id].name +"</option>");
+				 });
 			  console.log(msg);
 			}); 
  

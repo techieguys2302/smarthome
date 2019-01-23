@@ -6,7 +6,7 @@
 </ul>
 <ul class="drop-menus">
 <li class="drop-menus"><a class="drop-menus">Home</a></li>
-<div>
+
 <li class="drop-menus"><a class="drop-menus">Sensor</a>
 <ul class="drop-menus">
 <li class="drop-menus"><a class="drop-menus">Associate Sensor</a></li>
@@ -38,12 +38,9 @@
 <li class="drop-menus"><a class="drop-menus">View Complains</a></li>
 </ul>
 </li>
-<li class="drop-menus"><a class="drop-menus">About Us</a>
-<ul class="drop-menus">
-<li class="drop-menus"><a class="drop-menus">Our Team</a></li>
-<li class="drop-menus"><a class="drop-menus">FAQ's</a></li>
-</ul>
-</li>
-</ul>
 
+</ul>
+<ul class="drop-menus">
+<li class="drop-menus"></li>
+</ul>
 </div>

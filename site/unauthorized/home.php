@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Home Page</title>
+<title>SmartHome</title>
 <link rel="stylesheet" type="text/css" href="../../css/home.css">
 </head>
 <body class="home">
@@ -12,10 +12,6 @@
 <?php
   include("../core/menu.php");
 
-?>
-<?php
-  include("../core/dropdownmenu.php");
-  
 ?>
 
 <div class="slideshow-container" >
@@ -143,14 +139,6 @@ function showSlides() {
     setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
 
-function login(){
-	window.location.href= "/smarthome/site/unauthorized/login.php";
-}
-
-
-function register(){
-	window.location.href= "/smarthome/site/unauthorized/registration.php";
-}
 </script>
 
 </body>

@@ -38,9 +38,51 @@ text-decoration: red !important;
 #firstlist{
 	colour: orange;
 }
+
+.rightmenu{
+	 margin:20px;
+	 float:right;
+ }
+
+#buttonone{
+	 background-color: #87cefa;
+	 font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+	 color: black;
+	 border: none;
+	 font-size: 12px;
+	 font-weight: bold;
+	 text-transform: uppercase;
+	 box-shadow: 2px 2px 2px 2px black;
+	 line-height: 40px;
+	 width: 150px;
+	 margin-top: -11px;
+	 margin-right:20px;
+	
+ }
  
- .rightmenu{
-	 display:none !important;
+  #buttonone:hover{
+	 color:white;
+
+ }
+ 
+
+ 
+ #buttontwo{
+	 background-color: #8C8C8C;
+	 color: white;
+	 font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+	 border: none;
+	 text-transform: uppercase;
+	 box-shadow: 2px 2px 2px 2px black;
+	 font-weight:bold;
+	 line-height: 40px;
+	 
+	 width: 150px;
+	 margin-left: 10px;
+ }
+  #buttontwo:hover{
+	 color:black;
+	
  }
  
  

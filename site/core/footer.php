@@ -31,6 +31,6 @@
 </div>
 
 <div class="footer-bottom">
-<p>Copyright@<a href="#">2018</a></p>
+<p>Copyright@<a href="#">2019</a></p>
 
 </div>

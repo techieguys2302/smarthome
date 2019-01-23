@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Smarthome Login</title>
 	<!------ Include the above in your HEAD tag ---------->
 <link href="../../css/login.css" rel="stylesheet" id="bootstrap-css">
 <link href="../../css/menu.css" rel="stylesheet" id="bootstrap-css"> 
