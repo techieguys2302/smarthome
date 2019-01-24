@@ -8,7 +8,7 @@ $(document).ready(function(){
 				 $.each(msg,function(id,item){
 					 $("#fname").val(msg[id].First_Name); 
 					 $("#lname").val(msg[id].Last_Name); 
-					 $("#email").val(msg[id].Email); 
+					 $("#cpassword").val(msg[id].Password); 
 					 					 	
 				 });
 			  console.log(msg);
@@ -25,10 +25,10 @@ $('#edit_submit').click(function() {
 			  type: "POST",
 			  url: "user-profile-edit-ajax.php",
 			  data: { edit : 'edit',fname : $('#fname').val(),lname : $('#lname').val(),
-			  email : $('#email').val()},
+			  cpassword : $('#cpassword').val()},
 			  success: function(msg){
 			
-    			document.location.href = "/smarthome/site/user/user-profile.php";
+    			document.location.href = "/smarthome/site/user/dashboard-user.php";
 			    console.log(msg);
 			  }
 			  
@@ -89,19 +89,27 @@ function validateUserDetails(){
 		return false;
 	}
 	
-		
-	var email = $('#email').val();
+	if($('#fname').val()&& !$('#lname').val() && !$('#cpassword').val()){
+		setErrorMessage("Please enter the password");
+		return false;
+	}
 	
-	if(typeof undefined == typeof email || null == email || "" == email ||
-		   (email.indexOf('@') == -1 || email.indexOf('.') == -1 || (email.substring(0,email.indexOf('@'))).length < 1 || (email.substring(email.lastIndexOf('.'),email.length)).length <= 1 || (email.substring(email.indexOf('@'),email.lastIndexOf('.')).length < 1 ))){
-			$("#error").text("Please enter a valid email id");
+	if($('#fname').val()&& $('#lname').val() && $('#cpassword').val()){
+	
+		
+	var password = $('#cpassword').val();
+	var password_regex = /^[a-zA-Z0-9\[\]\.\-#'@`~!$%^&*;:",<>?\/]{8,16}$/;
+	 if(typeof undefined == typeof password || null == password || "" == password || !password_regex.test(password)){
+			$("#error").text("Please enter a password that has characters between 8 and 16 and contains atleast one upper case letter,one digit and one special character");
 			$("#error").removeClass('hidden');
 			$("#error").addClass('show');
 			return false;
-		} else {
-			return true;
-		}  
 			
+} else {
+		return true;
+	}	
+	  
+	} 	
 		}
 
 function setErrorMessage(msg){
@@ -118,7 +126,7 @@ function enableFields(event){
 $("#edit_btn_div").prop('hidden', false);
 $('#fname').prop('disabled', false); 
 $('#lname').prop('disabled', false); 
-$('#email').prop('disabled', false);  
+$('#cpassword').prop('disabled', false);  
 
 event.preventDefault();
 	

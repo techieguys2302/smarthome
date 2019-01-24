@@ -48,7 +48,7 @@
 				 <input class="btnsubmit btn-warning submit"  id ="edit" name="edit" type="submit" value=
                             "Edit" >
 							
-							<input class="btnsubmit btn-warning submit" id ="change_pwd_submit" name="change_pwd_submit" type="button" value= "Change password"></div>
+							
 				 
 		   </div>
 		 </div>
@@ -77,9 +77,9 @@
 		 <div class="col-sm-12">
 		     <div class="row">
 			     <div class="col-xs-4">
-		             <label class="mail" >Email </label></div>
+		             <label class="mail" >Password </label></div>
 			     <div class="col-xs-8"	>	 
-			          <input type="email" name="email"  id="email" class="form-control" disabled="disabled">
+			          <input type="password" name="cpassword"  id="cpassword" class="form-control" disabled="disabled">
 		         </div>
 		     </div>
 		 </div>

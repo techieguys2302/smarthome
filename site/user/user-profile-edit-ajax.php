@@ -6,12 +6,12 @@ if (isset($_POST['edit'])) {
 	$fname=$_POST['fname'];
 	$lname=$_POST['lname'];
 	$fname=$_POST['fname'];
-	$email=$_POST['email'];
+	$password=$_POST['cpassword'];
 	
 	
 	$role = "Customer";
 	
-	$statement="Update domisep.users set Last_Name = "."'".$lname."'".", First_Name = "."'".$fname."'".",Email = "."'".$email."'"." where Id = 1;";
+	$statement="Update domisep.users set Last_Name = "."'".$lname."'".", First_Name = "."'".$fname."'".",Password = "."'".$password."'"." where Id = ".$_SESSION['user'][0]['ID'].";";
 
 if (mysqli_query($db, $statement)) {
 	echo "record updated successfully in users table";

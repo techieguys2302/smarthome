@@ -92,8 +92,7 @@
 		         <div  >
 				 <input class="btnsubmit btn-warning submit"  name="submit" type="submit" value=
                             "Submit" onclick=validateFields()>
-							<input class="btnsubmit btn-warning submit"  name="cancel" type="button" value=
-                            "Cancel"></div>
+							
 				 
 		   </div>
 		 </div>
