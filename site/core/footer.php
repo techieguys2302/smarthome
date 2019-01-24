@@ -17,15 +17,10 @@
 <div class="footer-menu-one">
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#">Our team</a></li>
 <li><a href="#">Contact us</a></li>
 </ul>
 </div>
 <div class="footer-menu-two">
-<ul>
-<li><a href="#">About us</a></li>
-<li><a href="#">FAQ's</a></li>
-</ul>
 </div>
 
 </div>

@@ -69,7 +69,6 @@
 				$rooms = array();
 				while($room = mysqli_fetch_assoc($room_sth)) {
 					$rooms[] = $room;
-					echo "room";
 				
 				
 			?>
@@ -130,7 +129,7 @@
 							<div class="column" id="sensor<?php echo $index;?>">
 								<div class="sensor-label">
 									<label class="sensor-name"><?php echo $sensor['NAME']; ?></label>
-									<a href="javascript:void(0)" class="delete-btns" id="deleSensor<?php echo $sensor['ID']?>">Delete</a/><a href="javascript:void(0)" class="edit-btns" id="editSensor<?php echo $sensor['ID']?>"></a>
+									<a href="javascript:void(0)" class="delete-btns" id="deleSensor<?php echo $sensor['ID']?>">Delete</a/>
 								</div>
 							<hr class="divider"/>
 							<?php 

@@ -13,7 +13,8 @@
   include("../core/menu.php");
 
 ?>
-
+<br/>
+<hr class="homedivider"/>
 <div class="slideshow-container" >
 <div class="mySlides fade">
   <img src="../../images/banner1.jpg">

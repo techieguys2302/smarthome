@@ -1,4 +1,4 @@
-/*-----Background-----*/
+	/*-----Background-----*/
 
 body{
 	 background-image:url(../images/c4.jpg);
@@ -39,6 +39,9 @@ body{
      font-size: 14px;
      color: grey;
      margin-top: 5px;
+	 font-size: 20px;
+	font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+	font-weight: bold;
 }
 #lname{
 	 margin-top:5px;
@@ -148,6 +151,8 @@ body{
 	color: grey;
     padding: 0;
 	border: none;
+	margin-top: 41px;
+	margin-right: 15px;
 	background: none;
 	
 }
@@ -172,17 +177,44 @@ body{
 	display: block !important;
 }
 
+.forgot-password{
+	padding-left: 200px;
+	font-size: 20px;
+	font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+	font-weight: bold;
+	float:right;
+}
+
+.forgot-password:hover{
+
+	color: black !important;
+}
+
 
 .login-btn,.reset-btn{
-	color: #black !important;
-	font-size: 20px;
-    background-color: transparent !important;
+	color: black !important;
+	font-size: 23px;
+    background-color: grey !important;
     padding: 0;
-	border: none;
+	border: 2px solid black;
 	background-color: none !important;
 	
 }
 
+
+.login-btn:hover {
+    box-shadow: 2px 1px 2px 3px #99ccff;
+	background-color: white !important;
+	transition: background-color 1.15s ease-in-out,border-color 1.15s ease-in-out,box-shadow 1.15s ease-in-out;
+	
+}
+
+.reset-btn:hover{
+
+	box-shadow: 2px 1px 2px 3px #99ccff;
+	background-color: white !important;
+	transition: background-color 1.15s ease-in-out,border-color 1.15s ease-in-out,box-shadow 1.15s ease-in-out;
+}
 
 .btn.btn-warning:hover {
     box-shadow: 2px 1px 2px 3px #99ccff;

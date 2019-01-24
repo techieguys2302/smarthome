@@ -52,13 +52,19 @@
 		 </div>
      
 		  <br/>
-		  <br/>
+		 
+		 
+		  
+		  <div class="col-sm-12">
+		  
+					<a id="forgotPassword" class="forgot-password" href="/smarthome/site/unauthorized/forgot-password.php">Forgot password?</a>
+		  </div>
      
 		     <div class="col-sm-12">
 				<div class="row">
 					 <div class="button col-xs-8">
-						<div class="btn btn-warning submit" id="login" ><button class="login-btn">Login</button></div>
-						<div class="btn btn-warning reset"><button id="reset" class="reset-btn">Reset</button></div>
+						<button class="login-btn" id="login">&nbsp;Login&nbsp;</button>
+						<button id="reset" class="reset-btn">&nbsp;Reset&nbsp;</button>
 					 </div>
 				 </div>
 				 

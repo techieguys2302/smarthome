@@ -19,6 +19,7 @@
    include("../core/menu.php");
 ?>
 <br/>
+<div class="body">
  <div class="container" >
  <!---heading---->
      <header class="heading"> User Registration </header>
@@ -98,10 +99,15 @@
 		 </div>
 		 
 	 </div>	 
+	 </div>
 	</form>	 		 
 		 
-</div>
 
+</div>
+</div>
+<?php
+  include("../core/footer.php");
+?>
 </body>
 	<script src="../../js/profile/registration.js"></script>
 </html>

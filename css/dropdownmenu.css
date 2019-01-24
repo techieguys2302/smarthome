@@ -1,12 +1,8 @@
-body{
-background: url("smrts.jpg") no-repeat;
-background-size:cover;
-font-family:Arial;
-color:white;
-}
+	
 
 .drop-menu{
 background-color : grey;
+overflow: left;
 }
 
 .center{
