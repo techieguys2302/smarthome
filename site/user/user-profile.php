@@ -26,6 +26,13 @@
      	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<?php
+   include("../core/loginmenu.php");
+?>
+<?php
+  include("../core/dropdownmenu.php");
+  
+?>
  <div class="container" >
  <!---heading---->
      <header class="heading"> Profile Management </header>

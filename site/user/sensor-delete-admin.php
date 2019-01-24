@@ -31,7 +31,11 @@
 <body>
 
 <?php
-   include("../core/menu.php");
+   include("../core/loginmenu.php");
+?>
+<?php
+  include("../core/dropdownmenu.php");
+  
 ?>
  <div class="container" >
  <!---heading---->

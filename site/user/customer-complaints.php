@@ -19,7 +19,7 @@
 <html>
 <head>
      <meta charset="UTF-8">
-     <title>Admin Dashboard</title>
+     <title>Customer Complaints</title>
      	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -33,7 +33,7 @@
 ?>
 <div class="table-container" >
  <!---heading---->
-     <header class="heading"> Admin Dashboard </header>
+     <header class="heading"> Customer Complaints </header>
 	 <div class = "space"></div>
 	 <table border='1' style = "margin-top:-70px;">   
 	  <tr>
