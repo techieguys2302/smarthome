@@ -10,7 +10,9 @@ $street = $_POST['street'];
 $city = $_POST['city'];
 $country = $_POST['country'];
 $zipcode = $_POST['zipcode'];
-	$role = "Customer";
+$userid = $_SESSION['user'][0]['ID'];
+	
+	$role = "user";
 	
 	$statement="INSERT INTO domisep.apartment
 (
@@ -23,12 +25,8 @@ $zipcode = $_POST['zipcode'];
 `User_Id`,
 `Apartment_Role`,
 `Status`,
-`Number_Of_Rooms`,
-`Number_Of_People`,
-`Created_By`,
-`Created_On`,
-`Modified_By`,
-`Modified_On`)
+`Created_On`
+)
 VALUES
 (
 '$apname',
@@ -37,24 +35,20 @@ VALUES
 '$city',
 '$country',
 '$zipcode',
-1,
+ $userid,
 'Primary user',
 1,
-4,
-3,
-'neethub',
-NOW(),
-'neethub',
 NOW()
-)";
+);";
 
 
 
 
 if (mysqli_query($db, $statement)) {
-   echo "";
+   echo ("/smarthome/site/user/room.php");
 } else {
     echo "Error: " . $statement . "<br>" . mysqli_error($db);
+	echo "/smarthome/site/dashboard-user.php";
 }
 	 }
 	 

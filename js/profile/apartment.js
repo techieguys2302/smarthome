@@ -62,24 +62,7 @@ function validateApartmentFields(){
 	
 }
 
-$('#apartment_submit').click(function() {
-   
- 
-   
-  
-	
-	 $.ajax({
-			  type: "POST",
-			  url: "apartment-ajax.php",
-			  data: { apname: $('#apname').val(), hname: $('#hname').val(),
-			  street: $('#street').val(),city: $('#city').val(),
-			  country: $('#country').val(),zipcode: $('#zipcode').val()}
-			}).done( function( msg ) {
-			document.location.href = 	"/smarthome/site/user/room.php";
-			  
-			}); 
- 
-});
+
 
 function setErrorMessage(msg){
 	
