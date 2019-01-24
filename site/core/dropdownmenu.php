@@ -34,7 +34,7 @@
 
 <li class="drop-menus"><a class="drop-menus"href="/smarthome/site/user/contact-us.php">Contact Us</a>
 <ul class="drop-menus">
-<li class="drop-menus"><a class="drop-menus"href="/smarthome/site/user/dashbord-admin.php">View Complains</a></li>
+<li class="drop-menus"><a class="drop-menus"href="/smarthome/site/user/customer-complaints.php">View Complains</a></li>
 </ul>
 </li>
 

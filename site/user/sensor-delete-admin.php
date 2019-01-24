@@ -25,7 +25,7 @@
 <html>
 <head>
      <meta charset="UTF-8">
-     <title>Add Sensor</title>
+     <title>Delete Sensor</title>
      	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -39,7 +39,7 @@
 ?>
  <div class="container" >
  <!---heading---->
-     <header class="heading"> Admin - Add Sensor </header>
+     <header class="heading"> Admin - Delete Sensor </header>
 	 <div class = "space"></div>
 	<!---Form starting----> 
 	<form method="post" name=""  >

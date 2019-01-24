@@ -61,7 +61,7 @@
 		 </div>
 	 <!--- For Name---->
          <div class="col-sm-12">
-             <div class="row">
+             <div class="row" style = "margin-top:40px;">
 			     <div class="col-xs-4">
           	         <label class="firstname">First Name </label> </div>
 		         <div class="col-xs-8">

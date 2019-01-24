@@ -35,7 +35,7 @@
  <!---heading---->
      <header class="heading"> Customer Complaints </header>
 	 <div class = "space"></div>
-	 <table border='1' style = "margin-top:-70px;">   
+	 <table border='1' >   
 	  <tr>
 	    <th class="mail" >Complaint Description</th>
 		<th class="mail" >Customer Name</th>
@@ -49,7 +49,7 @@
 	$query = "select c.Description,u.First_Name,u.Last_Name,u.Email,c.Date from domisep.complaint as c inner join domisep.users as u on c.User_Id = u.ID ;";
 			$sth = mysqli_query($db,$query);
 		while($row = mysqli_fetch_assoc($sth)) {
-			echo "data";
+			
 			echo " <tr> ";
 			echo " <td class='mail'>{$row['Description']}</td> ";
 			echo " <td class='mail'>{$row['First_Name']} {$row['Last_Name']} </td> ";

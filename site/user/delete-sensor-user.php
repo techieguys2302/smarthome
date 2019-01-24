@@ -37,7 +37,7 @@
 ?>
  <div class="container" >
  <!---heading---->
-     <header class="heading"> Delete Sensor </header>
+     <header class="heading"> Disassociate Sensor </header>
 	 <div class = "space"></div>
 	<!---Form starting----> 
 	<form method="post" name="">

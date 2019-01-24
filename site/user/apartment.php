@@ -54,11 +54,11 @@
 		 </div>
 		 
 		 
-         <div class="col-sm-12">
+         <div class="col-sm-12" >
 		     <div class="row">
-			     <div class="col-xs-4">
+			     <div class="col-xs-4" >
                      <label class="lastname">No/Name </label></div>
-				<div class ="col-xs-8">	 
+				<div class ="col-xs-8" style="margin-top:5px;">	 
 		             <input type="text" name="hname" id="hname" placeholder="Enter the house number/name" class="form-control last">
                 </div>
 		     </div>
@@ -67,8 +67,8 @@
 		 <div class="col-sm-12">
 		     <div class="row">
 			     <div class="col-xs-4">
-		             <label class="mail" >Street </label></div>
-			     <div class="col-xs-8"	>	 
+		             <label class="lastname" >Street </label></div>
+			     <div class="col-xs-8"	style="margin-top:5px;">	 
 			          <input type="text" name="street"  id="street" placeholder="Enter the street" class="form-control" >
 		         </div>
 		     </div>
@@ -77,8 +77,8 @@
           <div class="col-sm-12">
 		         <div class="row">
 				     <div class="col-xs-4">
-		 	              <label class="pass">Area </label></div>
-				  <div class="col-xs-8">
+		 	              <label class="lastname">Area </label></div>
+				  <div class="col-xs-8" style="margin-top:5px;">
 			             <input type="text" name="area" id="area" placeholder="Please enter the area" class="form-control">
 				 </div>
           </div>
@@ -91,7 +91,7 @@
             <div class="col-sm-12 col-sm-exr" > 
 		         <div class="row">
 				     <div class="col-xs-4">
-		 	              <label class="pass">City &nbsp</label></div>
+		 	              <label class="lastname">City &nbsp</label></div>
 				  <div class="col-xs-8">
 			             <input type="text" name="city" id="city" placeholder="Please enter city" class="form-control">
 				 </div>
@@ -101,7 +101,7 @@
 		   <div class="col-sm-12 col-sm-exr" > 
 		         <div class="row">
 				     <div class="col-xs-4">
-		 	              <label class="pass">Country</label></div>
+		 	              <label class="lastname">Country</label></div>
 				  <div class="col-xs-8">
 			             <input type="text" name="country" id="country" placeholder="Please enter country" class="form-control">
 				 </div>
@@ -111,7 +111,7 @@
 		   <div class="col-sm-12 col-sm-exr" > 
 		         <div class="row">
 				     <div class="col-xs-4">
-		 	              <label class="pass">Zipcode &nbsp</label></div>
+		 	              <label class="lastname">Zipcode &nbsp</label></div>
 				  <div class="col-xs-8">
 			             <input type="text" name="zipcode" id="zipcode" placeholder="Please enter zipcode" class="form-control">
 				 </div>
@@ -130,8 +130,7 @@
 				 <input class="btnsubmit btn-warning submit" id="apartment_submit" name="apartment_submit" type="submit" value=
                             "Next" onclick="validateApartmentFields()"/>
 							
-				<input class="btnsubmit btn-warning submit" id="apartment_submit" name="apartment_submit" type="button" value=
-                            "Cancel" onclick="cancel()"/>
+				
 							
 							
 							
