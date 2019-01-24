@@ -24,7 +24,7 @@ $('#apname').change(function() {
 $('#sensortype').change(function() {
     var sensorType = this.value;
 
-	if(sensorType == 1){
+	if(sensorType == 'Heater'){
 		document.getElementById("mindiv").style.display="block";
 		document.getElementById("maxdiv").style.display="block";
 	} else {

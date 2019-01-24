@@ -23,7 +23,7 @@ if (mysqli_query($db, $statement)) {
 	if (isset($_POST['getdata'])) {
 		
 	
-        $select_user_detail="select First_Name,Last_Name,Email from domisep.users where id=".$_SESSION['user'][0]['ID'].";";
+        $select_user_detail="select First_Name,Last_Name,Password from domisep.users where id=".$_SESSION['user'][0]['ID'].";";
 		$result = mysqli_query($db,$select_user_detail);
 		$user_detail_rows = array();
 		 if (mysqli_num_rows($result) != 0){
