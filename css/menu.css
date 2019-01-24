@@ -16,14 +16,21 @@ background-color: white;
 padding-top: 20px;
 }
 
+.loggedout.menu{
+
+padding-top: 0px !important;
+}
+
 /*menu*/
 .leftmenu{
 	width: 50%;
 	float: left;
 	margin:0;
-	padding-top: 5px;
+	padding-top: 25px;
 	
 }
+
+
 .leftmenu h4{
 	padding-left:70px;
 	font-weight: bold;
@@ -43,6 +50,10 @@ text-decoration: red !important;
 	 margin:20px;
 	 float:right;
  }
+ 
+ .loggedout .rightmenu{
+	margin: 25px !important;
+}
 
 #buttonone{
 	 background-color: #87cefa;

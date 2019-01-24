@@ -1,0 +1,12 @@
+.bg-dark{
+background-color: white !important;
+height: auto !important;
+display: block !important;
+}
+
+.detail{
+display: block !important;	
+margin-top: 70px !important;
+margin: auto;
+ width: 50%;
+}

@@ -26,7 +26,12 @@ color: #8C8C8C;
 
 .menu{
 color: #fff;
-height: 70px;
+height: 77px !important;
+}
+
+ .loggedout .leftmenu{
+	margin: 0px !important;
+	padding-top: 0px !important;
 }
 
 /*menu*/
@@ -101,11 +106,16 @@ height: 70px;
 
  }
  
+ .homedivider{
+	margin: 0px !important;
+	padding: 0px !important;
+ }
+ 
  /*slider*/
  .slideshow-container{
 	 width:100% !important;
 	 position:absolute;
-	     margin-top: 40px;
+	 margin-top:0px;
  }
  
  .sensors{
