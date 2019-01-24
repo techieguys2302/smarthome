@@ -24,9 +24,8 @@ Password,
 Status,
 User_Role,
 Created_By,
-Created_On,
-Modified_By,
-Modified_On
+Created_On
+
 )
 VALUES
 (
@@ -36,8 +35,6 @@ VALUES
 '$password',
  1,
 '$role',
-'$fname',
-NOW(),
 '$fname',
 NOW()
 )";
