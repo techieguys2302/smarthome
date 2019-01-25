@@ -71,6 +71,7 @@
 				
 				
 			?>
+			<label class="error hidden" id="error<?php echo $r['ID']?>"></label>
 			<div class="aparment-row centers" >
 			 <!--- For Apartment---->
 				 
@@ -241,7 +242,7 @@
 							<div class="rooms-row centers">
 								<div>
 									 <div>
-										 <label class="room" id="room">Room</label> 
+										<!-- <label class="room" id="room">Room</label> -->
 									 </div>
 										<div>
 												<label class="error" id="error">No room assigned to apartment!!</label> 

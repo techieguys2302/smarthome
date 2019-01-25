@@ -43,28 +43,7 @@ $('.edi-btn,.edit-btns').click(function(){
 	
 });
 
-function ajaxCall($id,$url){
-	
-	$.ajax({
-			  type: "POST",
-			  url: $url,
-			  data: {  apname: $id  }
-		   }).done( function( msg ) {
-			  //alert( "Data Saved: " + msg );
-			  
-			  console.log(msg);
-			  if(msg.indexOf('Success') != -1){
-					window.location.href = msg;
-			  }else if(msg.indexOf('Error') != -1){
-					window.location.href = msg;
-			  }
-			  else{
-				  
-				  document.location.href = "/smarthome/site/unauthorized/login.php";
-			  }
-		   });
-	
-}
+
 
 
 $('.del-btn,.delete-btns').click(function(){
@@ -85,14 +64,17 @@ $('.del-btn,.delete-btns').click(function(){
 			  //alert( "Data Saved: " + msg );
 			  
 			  console.log(msg);
-			  if(msg.indexOf('Success') != -1){
-					window.location.href = msg;
+			  if(msg.indexOf('dashboard-user.php') != -1){
+					window.location.reload(true);
 			  }else if(msg.indexOf('failed') != -1 || msg.indexOf('Failed') != -1){
-					
+				  console.log("here");
+					$('#error'+aparId).text("System unavailable. Please try again later");
+				  $("#error"+aparId).removeClass('hidden');
+				  $("#error"+aparId).addClass('show');
 			  }
 			  else{
 				  
-				  document.location.href = "/smarthome/site/unauthorized/login.php";
+				  window.location.href= "/smarthome/site/user/logout.php";
 			  }
 		   });
 		
@@ -109,21 +91,23 @@ $('.del-btn,.delete-btns').click(function(){
 			  //alert( "Data Saved: " + msg );
 			  
 			  console.log(msg);
-			  if(msg.indexOf('Success') != -1){
-					window.location.href = msg;
+			  if(msg.indexOf('dashboard-user.php') != -1){
+					window.location.reload(true);
 			  }else if(msg.indexOf('failed') != -1 || msg.indexOf('Failed') != -1){
-					
+				  console.log("here");
+					$('#error'+aparId).text("System unavailable. Please try again later");
+				  $("#error"+aparId).removeClass('hidden');
+				  $("#error"+aparId).addClass('show');
 			  }
 			  else{
 				  
-				  document.location.href = "/smarthome/site/unauthorized/login.php";
+				  window.location.href= "/smarthome/site/user/logout.php";
 			  }
 		   });
 		
 	}else if(id.indexOf('deleSensor') > -1){
 		var sensorId = id.slice((id.indexOf('deleApart')+11),id.length);
 		console.log(sensorId);
-		ajaxCall(sensorId,'delete-sensor-user-ajax.php');
 		$.ajax({
 			  type: "POST",
 			  url: 'delete-sensor-user-ajax.php',
@@ -132,14 +116,17 @@ $('.del-btn,.delete-btns').click(function(){
 			  //alert( "Data Saved: " + msg );
 			  
 			  console.log(msg);
-			  if(msg.indexOf('Success') != -1){
-					window.location.href = msg;
+			  if(msg.indexOf('dashboard-user.php') != -1){
+					window.location.reload(true);
 			  }else if(msg.indexOf('failed') != -1 || msg.indexOf('Failed') != -1){
-					
+				  console.log("here");
+					$('#error'+aparId).text("System unavailable. Please try again later");
+				  $("#error"+aparId).removeClass('hidden');
+				  $("#error"+aparId).addClass('show');
 			  }
 			  else{
 				  
-				  document.location.href = "/smarthome/site/unauthorized/login.php";
+				  window.location.href= "/smarthome/site/user/logout.php";
 			  }
 		   });
 		
