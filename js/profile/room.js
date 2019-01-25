@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    console.log("room");
 	
 	
 });
@@ -33,8 +32,15 @@ $('#add_room_submit').click(function() {
 			  url: "room-ajax.php",
 			  data: { apname: $('#apname').val(), rname: $('#rname').val()}
 			}).done( function( msg ) {
-			 document.location.href = 	"/smarthome/site/user/sensor.php";
-			  console.log(msg);
+				console.log(msg);
+			 if(msg.indexOf('sensor.php') != -1){
+					window.location.href = msg;
+			  }else if(msg.indexOf('failed') != -1 || msg.indexOf('Failed') != -1){
+				  console.log("here");
+					$('#error').text("System unavailable. Please try again later");
+				  $("#error").removeClass('hidden');
+				  $("#error").addClass('show');
+			  }
 			}); 
   } else {
 	  return false;

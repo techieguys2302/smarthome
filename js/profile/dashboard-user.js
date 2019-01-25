@@ -95,9 +95,9 @@ $('.del-btn,.delete-btns').click(function(){
 					window.location.reload(true);
 			  }else if(msg.indexOf('failed') != -1 || msg.indexOf('Failed') != -1){
 				  console.log("here");
-					$('#error'+aparId).text("System unavailable. Please try again later");
-				  $("#error"+aparId).removeClass('hidden');
-				  $("#error"+aparId).addClass('show');
+					$('#errorRoom'+roomId).text("System unavailable. Please try again later");
+				  $("#errorRoom"+roomId).removeClass('hidden');
+				  $("#errorRoom"+roomId).addClass('show');
 			  }
 			  else{
 				  
@@ -120,9 +120,9 @@ $('.del-btn,.delete-btns').click(function(){
 					window.location.reload(true);
 			  }else if(msg.indexOf('failed') != -1 || msg.indexOf('Failed') != -1){
 				  console.log("here");
-					$('#error'+aparId).text("System unavailable. Please try again later");
-				  $("#error"+aparId).removeClass('hidden');
-				  $("#error"+aparId).addClass('show');
+					$('#errorSensor'+sensorId).text("System unavailable. Please try again later");
+				  $("#errorSensor"+sensorId).removeClass('hidden');
+				  $("#errorSensor"+sensorId).addClass('show');
 			  }
 			  else{
 				  

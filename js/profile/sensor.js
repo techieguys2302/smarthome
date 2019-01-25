@@ -37,33 +37,6 @@ $('#sensortype').change(function() {
 });
 
 
-$('#add_sensor_submit').click(function() {
-	var minval = document.getElementById("min").value;
-	var maxval = document.getElementById("max").value;
-  
-   if(minval == ''){
-	   minval = 0;
-	    
-   }
-   
-    if(maxval == ''){
-	   maxval = 0;
-	    
-   }
-       
-	
-	 $.ajax({
-			  type: "POST",
-			  url: "sensor-add-ajax.php",
-			  data: { rname: $('#rname').val(),sname: $('#sname').val(),sensortype: $('#sensortype').val(),min: minval,max: maxval }
-			}).done( function( msg ) {
-			document.location.href="/smarthome/site/user/sensor.php"
-			  console.log(msg);
-			}); 
- 
-});
-
-
 $('#finish_submit').click(function() {
    	var minval = document.getElementById("min").value;
 	var maxval = document.getElementById("max").value;
@@ -77,17 +50,26 @@ $('#finish_submit').click(function() {
 	   maxval = 0;
 	    
    }
+   
+     var sensorId = $('#sensorname').val();
+	   var rname = $('#rname').val();
 	
 	 $.ajax({
 			  type: "POST",
-			  url: "sensor-ajax.php",
-			  data: { rname: $('#rname').val(),sname: $('#sname').val(),sensortype: $('#sensortype').val(),min: minval,max: maxval }
-
+			  url: "sensor-add-ajax.php",
+			  data: { rname: rname,sensortype: sensorId ,min: minval,max: maxval }
 			}).done( function( msg ) {
-				document.location.href="/smarthome/site/user/registration.php"
-			  console.log(msg);
+			if(msg.indexOf('dashboard-user.php') != -1){
+					window.location.href = msg;
+			  }else if(msg.indexOf('failed') != -1 || msg.indexOf('Failed') != -1){
+				  console.log("here12");
+					$('#error').text("System unavailable. Please try again later");
+				  $("#error").removeClass('hidden');
+				  $("#error").addClass('show');
+			  }
 			}); 
  
+	return false;
 });
 
 

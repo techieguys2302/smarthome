@@ -45,6 +45,7 @@
 	<form method="post" name="">
 	<div class="row ">
 	
+	 <label class="error hidden" id="error"></label>
 	 <!--- For Name---->
          <div class="col-sm-12">
              <div class="row">
@@ -102,20 +103,20 @@
 		 <div class="col-sm-12" style="padding-top:10px;">
 		     <div class="row">
 			     <div class="col-xs-4">
-          	         <label class="firstname">Sensor Type </label> </div>
+          	         <label class="firstname">Sensor Name </label> </div>
 		         <div class="col-xs-8">
 		            <?php
 					include("../../config/config.php");
 					//session_start();
-					$sql_1="SELECT id,type FROM sensor_type order by type"; 
+					$sql_1="SELECT id,Name FROM sensor order by name"; 
 
 
 
-					echo "<select name= 'sensortype' id='sensortype' style= 'width:300px;height:35px;'>"; // list box select command
-					echo "<option selected=selected' value='select sensor type'>select sensor type</option>";
+					echo "<select name= 'sensorname' id='sensorname' style= 'width:300px;height:35px;'>"; // list box select command
+					echo "<option selected=selected' value='select sensor type'>select sensor name</option>";
 						foreach ($db->query($sql_1) as $row){//Array or records stored in $row
 							//echo 'value is : '.$row['name'];
-							echo "<option value='$row[id]'>".$row['type']."</option>"; 
+							echo "<option value='$row[id]'>".$row['Name']."</option>"; 
 							
 
 							/* Option values are added by looping through the array */ 

@@ -30,6 +30,27 @@ padding-top: 0px !important;
 	
 }
 
+.error{
+	color: red;
+    padding: 0;
+	width: 100%
+	display: block !important;
+	border: none;
+	background: none;
+	text-align: center;
+}
+
+
+.hidden{
+
+	display: none !important;
+}
+
+.show{
+
+	display: block !important;
+}
+
 
 .leftmenu h4{
 	padding-left:70px;

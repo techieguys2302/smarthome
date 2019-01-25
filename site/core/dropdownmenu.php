@@ -9,7 +9,7 @@
 
 <li class="drop-menus"><a class="drop-menus" >Sensor</a>
 <ul class="drop-menus">
-<li class="drop-menus"><a class="drop-menus" href="/smarthome/site/user/Sensor.php">Associate Sensor</a></li>
+<li class="drop-menus"><a class="drop-menus" href="/smarthome/site/user/sensor.php">Associate Sensor</a></li>
 <li class="drop-menus"><a class="drop-menus"href="/smarthome/site/user/delete-sensor-user.php">Disassociate Sensor</a></li>
 <li class="drop-menus"><a class="drop-menus"href="/smarthome/site/user/sensor-add-admin.php">Add Sensor</a></li>
 <li class="drop-menus"><a class="drop-menus"href="/smarthome/site/user/sensor-delete-admin.php">Delete Sensor</a></li>

@@ -23,9 +23,7 @@ $userid = $_SESSION['user'][0]['ID'];
 `Country`,
 `Zipcode`,
 `User_Id`,
-`Apartment_Role`,
-`Status`,
-`Created_On`
+`Apartment_Role`
 )
 VALUES
 (
@@ -36,9 +34,7 @@ VALUES
 '$country',
 '$zipcode',
  $userid,
-'Primary user',
-1,
-NOW()
+'primary'
 );";
 
 
@@ -47,8 +43,7 @@ NOW()
 if (mysqli_query($db, $statement)) {
    echo ("/smarthome/site/user/room.php");
 } else {
-    echo "Error: " . $statement . "<br>" . mysqli_error($db);
-	echo "/smarthome/site/dashboard-user.php";
+    echo "failed";
 }
 	 }
 	 

@@ -14,8 +14,15 @@ $('#apartment_submit').click(function(){
 			  street: $('#street').val(),city: $('#city').val(),
 			  country: $('#country').val(),zipcode: $('#zipcode').val()}
 			}).done( function( msg ) {
-			document.location.href = 	"/smarthome/site/user/room.php";
-			  console.log(msg);
+				console.log(msg);
+				if(msg.indexOf('room.php') != -1){
+					window.location.href = msg;
+			  }else if(msg.indexOf('failed') != -1 || msg.indexOf('Failed') != -1){
+				  console.log("here");
+					$('#error').text("System unavailable. Please try again later");
+				  $("#error").removeClass('hidden');
+				  $("#error").addClass('show');
+			  }
 			});
 	} else {
 		return flag;

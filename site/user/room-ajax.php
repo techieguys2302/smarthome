@@ -7,28 +7,12 @@
 $apname = $_POST['apname'];
 $rname = $_POST['rname'];
 
-
-	$role = "Customer";
-	echo "statement is ";
-	$statement="INSERT INTO `domisep`.`room`
-(
-`Name`,
-`Apartment_Id`,
-`Created_On`
-)
-VALUES
-(
-'$rname',
-'$apname',
-NOW());";
-
-
-
+	$statement="INSERT INTO `domisep`.`room`(`Name`,`Apartment_Id`)VALUES('".$rname."','".$apname."');";
 
 if (mysqli_query($db, $statement)) {
-	echo "inserted successfully";
+	echo "/smarthome/site/user/sensor.php";
 } else {
-    echo "Error: " . $statement . "<br>" . mysqli_error($db);
+    echo "falied";
 }
 	 }
 	 

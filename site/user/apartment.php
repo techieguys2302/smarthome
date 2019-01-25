@@ -41,12 +41,14 @@
 	<!---Form starting----> 
 	<!--<form method="post" name="" >-->
 	<div class="row ">
-	
+						 <label class="error hidden" id="error"></label>
 	 <!--- For Name---->
          <div class="col-sm-12">
              <div class="row">
 			     <div class="col-xs-4">
           	         <label class="firstname">Apartment Name </label> </div>
+					 
+
 		         <div class="col-xs-8">
 		             <input type="text" name="apname" id="apname" placeholder="Enter the Apartment Name" class="form-control ">
              </div>

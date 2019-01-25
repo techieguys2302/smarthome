@@ -95,7 +95,7 @@
 				
 			?>
 				 
-				 
+				 <label class="error hidden" id="errorRoom<?php echo $room['ID']?>"></label>
 				<div class="rooms-row centers">
 					 <div class="room-row">
 							<h4 class="room-id"><label class="room-name" id="roomName">Room: <?php echo $room['Name'];?></label>
@@ -135,6 +135,7 @@
 						 <div class="sensor-row">
 							 <div >
 								  <label class="sensor-names" id="sensorName">Sensors</label>
+								  <label class="error hidden" id="errorSensors<?php echo $room['ID']?>"></label>
 							 </div>
 							 
 						 </div>
