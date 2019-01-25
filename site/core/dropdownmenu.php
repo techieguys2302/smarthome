@@ -5,7 +5,7 @@
 <li class="drop-menus"></li>
 </ul>
 <ul class="drop-menus">
-<li class="drop-menus"><a class="drop-menus" href="/smarthome/site/unauthorized/home.php">Home</a></li>
+<li class="drop-menus"><a class="drop-menus" href="/smarthome/site/user/dashboard-user.php">Home</a></li>
 
 <li class="drop-menus"><a class="drop-menus" >Sensor</a>
 <ul class="drop-menus">
