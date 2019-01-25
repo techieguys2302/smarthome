@@ -21,7 +21,10 @@
    include("../core/loginmenu.php");
 ?>
 <?php
-  include("../core/dropdownmenu.php");
+		if($_SESSION['user'][0]['User_Role'] == 'Customer' ){
+			include("../core/dropdownmenu.php");
+		}
+  
   
 ?>
 <br/><br/><br/>
@@ -37,10 +40,28 @@
 		//$user = json_decode($_SESSION['user'], true);
 			 
 				include("../../config/config.php");
-			$apartment_query = mysqli_query($db,"SELECT * FROM Apartment where User_Id = '" .$_SESSION['user'][0]['ID']. "'");
+				$ID = $_SESSION['user'][0]['ID'];
+				
+				if($_SESSION['user'][0]['User_Role'] == 'Secondary' ){
+					
+					$user_query = mysqli_query($db,"SELECT * FROM USERS AS U INNER JOIN user_aptmt_association AS A ON U.ID = A.userId where U.Id = '" .$_SESSION['user'][0]['ID']. "'");
+					
+					if (mysqli_num_rows($user_query) != 0){
+						
+						$user_id_query = mysqli_query($db,"SELECT * FROM USERS AS U INNER JOIN user_aptmt_association AS A ON U.ID = A.userId where U.Id = '" .$_SESSION['user'][0]['ID']. "'");
+						while($user_id_querys = mysqli_fetch_assoc($user_id_query)) {
+							
+							$ID = $user_id_querys['aptId'];
+						}
+					}
+					
+					
+				}
+				
+			$apartment_query = mysqli_query($db,"SELECT * FROM Apartment where User_Id = '" .$ID. "'");
 			   if (mysqli_num_rows($apartment_query) != 0){
 
-				$sth = mysqli_query($db,"SELECT * FROM Apartment where User_Id = '" .$_SESSION['user'][0]['ID']. "'");
+				$sth = mysqli_query($db,"SELECT * FROM Apartment where User_Id = '" .$ID. "'");
 				$apartements = array();
 				while($r = mysqli_fetch_assoc($sth)) {
 					$apartements[] = $r;
@@ -55,7 +76,7 @@
 				 
 					 <div>
 						 <div class="ap-row">
-							 <h4 class="apartment-id"><label class="apartment-name" id="apartmentName"><?php echo $r['Name']?></label><a href="javascript:void(0)" class="del-btn" id="deleApart<?php echo $r['ID']?>">Delete</a/><a href="javascript:void(0)" class="edi-btn" id="editApart<?php echo $r['ID']?>"></a></h4>
+							 <h4 class="apartment-id"><label class="apartment-name" id="apartmentName"><?php echo $r['Name']?></label><?php if($_SESSION['user'][0]['User_Role'] == 'Customer' ){ ?><a href="javascript:void(0)" class="del-btn" id="deleApart<?php echo $r['ID']?>">Delete</a/><a href="javascript:void(0)" class="edi-btn" id="editApart<?php echo $r['ID']?>"></a><?php }?></h4>
 						</div>
 						 
 					 </div>
@@ -77,7 +98,7 @@
 				<div class="rooms-row centers">
 					 <div class="room-row">
 							<h4 class="room-id"><label class="room-name" id="roomName">Room: <?php echo $room['Name'];?></label>
-							  <a href="javascript:void(0)" class="del-btn" id="deleRoom<?php echo $room['ID']?>">Delete</a/><a href="javascript:void(0)" class="edi-btn" id="editRoom<?php echo $room['ID']?>"></a></h4>
+							  <?php if($_SESSION['user'][0]['User_Role'] == 'Customer' ){ ?><a href="javascript:void(0)" class="del-btn" id="deleRoom<?php echo $room['ID']?>">Delete</a/><a href="javascript:void(0)" class="edi-btn" id="editRoom<?php echo $room['ID']?>"></a><?php }?></h4>
 					 </div>
 				 <hr/>
 				<?php
@@ -90,7 +111,7 @@
 															INNER JOIN Apartment as A ON A.ID = R.Apartment_ID
 															INNER JOIN SENSOR_TYPE as ST ON ST.ID = S.Sensor_Type_Id
 															INNER JOIN USERS as U ON U.ID = A.User_Id 
-															where  RSA.Room_Id = '" .$room['ID']. "' and Apartment_Id = '" .$r['ID']. "' and U.ID ='" .$_SESSION['user'][0]['ID']. "'");
+															where  RSA.Room_Id = '" .$room['ID']. "' and Apartment_Id = '" .$r['ID']. "' and U.ID ='" .$ID. "'");
 															
 						   if (mysqli_num_rows($sensor_query) != 0){
 
@@ -102,7 +123,7 @@
 															INNER JOIN Apartment as A ON A.ID = R.Apartment_ID
 															INNER JOIN SENSOR_TYPE as ST ON ST.ID = S.Sensor_Type_Id
 															INNER JOIN USERS as U ON U.ID = A.User_Id 
-															where  RSA.Room_Id = '" .$room['ID']. "' and Apartment_Id = '" .$r['ID']. "' and U.ID ='" .$_SESSION['user'][0]['ID']. "'");
+															where  RSA.Room_Id = '" .$room['ID']. "' and Apartment_Id = '" .$r['ID']. "' and U.ID ='" .$ID. "'");
 							$sensors = array();
 							
 				
@@ -129,7 +150,7 @@
 							<div class="column" id="sensor<?php echo $index;?>">
 								<div class="sensor-label">
 									<label class="sensor-name"><?php echo $sensor['NAME']; ?></label>
-									<a href="javascript:void(0)" class="delete-btns" id="deleSensor<?php echo $sensor['ID']?>">Delete</a/>
+									<?php if($_SESSION['user'][0]['User_Role'] == 'Customer' ){ ?><a href="javascript:void(0)" class="delete-btns" id="deleSensor<?php echo $sensor['ID']?>">Delete</a/><?php }?>
 								</div>
 							<hr class="divider"/>
 							<?php 

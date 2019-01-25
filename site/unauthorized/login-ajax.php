@@ -26,7 +26,7 @@
 
 		//echo "User:==>"+$_SESSION["user"];
 		
-		if($rows[0]['User_Role'] == 'Customer'){
+		if($rows[0]['User_Role'] == 'Customer' || $rows[0]['User_Role'] == 'Secondary'){
 			
 			echo ("/smarthome/site/user/dashboard-user.php");  
 		}else if($rows[0]['User_Role'] == 'Admin'){

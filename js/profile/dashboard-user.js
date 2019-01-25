@@ -43,6 +43,29 @@ $('.edi-btn,.edit-btns').click(function(){
 	
 });
 
+function ajaxCall($id,$url){
+	
+	$.ajax({
+			  type: "POST",
+			  url: $url,
+			  data: {  apname: $id  }
+		   }).done( function( msg ) {
+			  //alert( "Data Saved: " + msg );
+			  
+			  console.log(msg);
+			  if(msg.indexOf('Success') != -1){
+					window.location.href = msg;
+			  }else if(msg.indexOf('Error') != -1){
+					window.location.href = msg;
+			  }
+			  else{
+				  
+				  document.location.href = "/smarthome/site/unauthorized/login.php";
+			  }
+		   });
+	
+}
+
 
 $('.del-btn,.delete-btns').click(function(){
 	
@@ -51,17 +74,83 @@ $('.del-btn,.delete-btns').click(function(){
 	if(id.indexOf('deleApart') > -1){
 		var aparId = id.slice((id.indexOf('deleApart')+9),id.length);
 		console.log(aparId);
+		
+		
+		
+		$.ajax({
+			  type: "POST",
+			  url: 'delete-apartment-ajax.php',
+			  data: {  apname: aparId  }
+		   }).done( function( msg ) {
+			  //alert( "Data Saved: " + msg );
+			  
+			  console.log(msg);
+			  if(msg.indexOf('Success') != -1){
+					window.location.href = msg;
+			  }else if(msg.indexOf('failed') != -1 || msg.indexOf('Failed') != -1){
+					
+			  }
+			  else{
+				  
+				  document.location.href = "/smarthome/site/unauthorized/login.php";
+			  }
+		   });
+		
+		
 	}else if(id.indexOf('deleRoom') > -1){
 		var roomId = id.slice((id.indexOf('deleApart')+9),id.length);
 		console.log(roomId);
 		
+		$.ajax({
+			  type: "POST",
+			  url: 'delete-room-ajax.php',
+			  data: {  rname: roomId  }
+		   }).done( function( msg ) {
+			  //alert( "Data Saved: " + msg );
+			  
+			  console.log(msg);
+			  if(msg.indexOf('Success') != -1){
+					window.location.href = msg;
+			  }else if(msg.indexOf('failed') != -1 || msg.indexOf('Failed') != -1){
+					
+			  }
+			  else{
+				  
+				  document.location.href = "/smarthome/site/unauthorized/login.php";
+			  }
+		   });
+		
 	}else if(id.indexOf('deleSensor') > -1){
 		var sensorId = id.slice((id.indexOf('deleApart')+11),id.length);
 		console.log(sensorId);
+		ajaxCall(sensorId,'delete-sensor-user-ajax.php');
+		$.ajax({
+			  type: "POST",
+			  url: 'delete-sensor-user-ajax.php',
+			  data: {  sid: sensorId  }
+		   }).done( function( msg ) {
+			  //alert( "Data Saved: " + msg );
+			  
+			  console.log(msg);
+			  if(msg.indexOf('Success') != -1){
+					window.location.href = msg;
+			  }else if(msg.indexOf('failed') != -1 || msg.indexOf('Failed') != -1){
+					
+			  }
+			  else{
+				  
+				  document.location.href = "/smarthome/site/unauthorized/login.php";
+			  }
+		   });
 		
 	}
 	
+	
+	
 });
+
+
+
 
 function updateStatus($id,$status){
 	
